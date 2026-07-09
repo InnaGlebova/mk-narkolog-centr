@@ -1,0 +1,151 @@
+/* garant */
+
+.garant__title {
+    text-align: left;
+}
+
+.garant p {
+    margin-bottom: 30px;
+}
+
+.garant p:last-child {
+    margin-bottom: 0;
+}
+
+.garant__top {
+    margin-bottom: 60px;
+}
+
+.garant__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.garant__item {
+    flex: 0 1 calc(50% - 16px);
+    padding: 20px;
+    height: 100%;
+}
+
+.garant__item-picture {
+    position: relative;
+
+    &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, #FFF9F1 0%, rgba(255, 249, 241, 0.00) 100%);
+        transform: rotate(180deg);
+    }
+}
+
+.garant__item-text {
+    padding-left: 20px;
+    position: relative;
+}
+
+.garant__item-text::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-blue);
+    left: 0;
+
+}
+
+.garant__item-text-name {
+    color: var(--primary-blue);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.garant__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.garant__item-picture {
+    height: 100%;
+    width: 100%;
+
+    & img {
+        max-height: 243px;
+        min-height: 243px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/* garant media */
+
+@media (max-width: 1000px) {
+
+    .garant__inner,
+    .garant__top {
+        margin-bottom: 30px;
+    }
+
+    .garant__item {
+        flex: 0 1 calc(50% - 16px);
+    }
+
+    .garant p {
+        margin-bottom: 16px;
+    }
+
+    .garant__item-text {
+        padding-left: 14px;
+    }
+
+    .garant__item {
+        padding: 10px;
+    }
+
+
+    .garant__item-picture {
+        & img {
+            max-height: 200px;
+            min-height: 200px;
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .garant__item {
+        padding: 0;
+    }
+
+    .garant__inner {
+        flex-direction: column;
+    }
+
+    .garant__item-picture {
+        & img {
+            max-height: 128px;
+            min-height: 128px;
+        }
+    }
+
+    .garant__item-text-name {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+}

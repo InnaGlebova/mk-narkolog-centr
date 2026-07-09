@@ -1,0 +1,94 @@
+/* conditions */
+.conditions__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.conditions__item {
+    flex: 0 1 calc(33.33333% - 21.3333px);
+}
+
+.conditions__item-picture {
+    margin-bottom: 10px;
+}
+
+.conditions__item-img {
+    border-radius: 100px 100px 0 0;
+    width: 138px;
+    height: 69px;
+    object-fit: cover;
+}
+
+.conditions__item-name {
+    color: var(--content-black);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+}
+
+.conditions__item-descr {
+    color: var(--content-black);
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.conditions__swiper-btns {
+    justify-content: right;
+    margin-top: 20px;
+}
+
+/* conditions media */
+
+@media (max-width: 1000px) {
+    .conditions__inner {
+        gap: 20px;
+    }
+
+    .conditions__item {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 650px) {
+    .conditions__item {
+        flex: 0 1 100%;
+        display: flex;
+        flex-flow: column;
+
+        &:nth-child(1) {
+            align-items: flex-start;
+        }
+
+        &:nth-child(2) {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        &:nth-child(3) {
+            align-items: flex-start;
+        }
+
+        &:nth-child(4) {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        &:nth-child(5) {
+            align-items: flex-start;
+        }
+
+        &:nth-child(6) {
+            align-items: flex-end;
+            text-align: right;
+        }
+    }
+}
+
+.conditions__inner,
+.conditions__swiper-btns {
+    padding: 0 16px;
+}

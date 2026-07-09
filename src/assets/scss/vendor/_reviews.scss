@@ -1,0 +1,118 @@
+/* reviews */
+.reviews__top-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #757575;
+}
+
+.reviews__item {
+    padding: 10px 20px;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 5px;
+        height: 100%;
+        background-color: var(--primary-blue);
+        left: 0;
+    }
+}
+
+.reviews__text {
+    padding-top: 10px;
+}
+
+.reviews__top-name {
+    color: var(--content-black);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+}
+
+.reviews__text {
+    margin-bottom: 10px;
+    flex-grow: 1;
+
+    & p {
+        color: var(--content-black);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+}
+
+.reviews__top-age {
+    color: var(--primary-blue);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+}
+
+.reviews__btn {
+    color: var(--primary-blue);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    max-height: 25px;
+    min-height: 25px;
+    text-align: left;
+}
+
+/* reviews раскрывашка */
+.reviews__close {
+    display: none;
+}
+
+.reviews__text {
+    position: relative;
+
+    &:not(.reviews_text_original).hidden {
+        max-height: 100px;
+        overflow: hidden;
+
+        &::before {
+            background: var(--background-lightblue);
+            bottom: -15px;
+            content: '';
+            display: block;
+            filter: blur(9px);
+            height: 40px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            width: 100%;
+        }
+    }
+}
+
+.reviews__btn.active {
+    display: block;
+}
+
+.reviews__top_original {
+    color: red;
+}
+
+/* reviews раскрывашка end*/
+
+.reviews__container {
+    padding: 0;
+}
+
+.reviews__swiper,
+.reviews__top-wrap {
+    padding: 0 15px;
+}
+
+/* reviews media */

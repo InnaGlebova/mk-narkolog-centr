@@ -1,0 +1,162 @@
+/* swiper */
+
+.swiper-button-disabled {
+    cursor: auto;
+    opacity: .5;
+    pointer-events: none;
+}
+
+
+.slider-button__prev,
+.slider-button__next {
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    width: 64px;
+    height: 64px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+
+.slider-button__prev::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background: url(../img/icons/prev.svg) center center no-repeat;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    background-size: cover;
+
+    @supports not (background: url("../img/icons/prev.svg")) {
+        background: url("../img/icons/prev.png") center center no-repeat;
+    }
+}
+
+.slider-button__next::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background: url(../img/icons/next.svg) center center no-repeat;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    background-size: cover;
+
+    @supports not (background: url("../img/icons/next.svg")) {
+        background: url("../img/icons/next.png") center center no-repeat;
+    }
+}
+
+.slider-button__prev:hover,
+.slider-button__next:hover {
+    background-color: #fff;
+}
+
+.slider-button__prev:hover::before {
+    background: url(../img/icons/prev-hover.svg) center center no-repeat;
+    object-fit: cover;
+    background-size: cover;
+
+    @supports not (background: url("../img/icons/prev-hover.svg")) {
+        background: url("../img/icons/prev-hover.png") center center no-repeat;
+    }
+}
+
+.slider-button__next:hover::before {
+    background: url(../img/icons/next-hover.svg) center center no-repeat;
+    object-fit: cover;
+    background-size: cover;
+
+    @supports not (background: url("../img/icons/next-hover.svg")) {
+        background: url("../img/icons/next-hover.png") center center no-repeat;
+    }
+}
+
+.swiper-btns {
+    display: flex;
+    gap: 25px;
+}
+
+.swiper__top-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper__top-wrap {
+    padding: 0 16px;
+}
+
+.swiper {
+    padding: 0 16px;
+}
+
+
+.swiper-pagination-bullets {
+    position: static;
+    z-index: 10;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    background-color: #db6f67;
+    position: relative;
+    border-radius: 50%;
+    transition: background-color .3s linear, border-color .3s linear;
+    border: 1px solid #eaeaea;
+    opacity: 1;
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+    height: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+
+    &:hover {
+        border-color: var(--primary-blue);
+    }
+
+    &.swiper-pagination-bullet-active {
+        background-color: var(--primary-blue);
+        border-color: var(--primary-blue);
+        width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
+        height: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
+    }
+}
+
+/* swiper media */
+
+@media (max-width: 1000px) {
+
+    .slider-button__next,
+    .slider-button__prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-button__prev:before,
+    .slider-button__next:before {
+        width: 15px;
+        height: 15px;
+    }
+
+    .swiper-btns {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .slider-button__next,
+    .slider-button__prev {
+        display: none;
+    }
+
+    .swiper-pagination-bullets {
+        display: flex;
+    }
+}

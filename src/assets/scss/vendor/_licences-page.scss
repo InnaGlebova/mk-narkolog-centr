@@ -1,0 +1,57 @@
+/* licences-page */
+.licences-page__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+}
+
+.licences-page__item {
+    flex: 0 1 calc(33.333% - 21.33333px);
+}
+
+.licences-page__picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+        max-height: 519px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1000px) {
+    .licences-page__inner {
+        gap: 20px;
+    }
+
+    .licences-page__item {
+        flex: 0 1 calc(33.333% - 13.33333px);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .licences-page__item {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 450px) {
+
+    .licences-page__item {
+        flex: 0 1 100%;
+    }
+
+    .licences-page__picture {
+        & img {
+            max-height: 425px;
+            min-height: 425px;
+        }
+    }
+    
+}
+

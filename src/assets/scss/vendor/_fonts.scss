@@ -1,0 +1,12 @@
+$inter-tight-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $weight in $inter-tight-weights {
+	@font-face {
+		font-family: 'Inter Tight';
+		font-style: normal;
+		font-weight: $weight;
+		font-display: swap;
+		src: url('../fonts/inter-tight-cyrillic-#{$weight}-normal.woff2') format('woff2'),
+		url('../fonts/inter-tight-cyrillic-#{$weight}-normal.woff') format('woff');
+	}
+}

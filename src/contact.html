@@ -1,0 +1,105 @@
+<div class="title__bg">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li> <a href="#">Главная</a></li>
+            <li>Контакты</li>
+        </ul>
+        <h1>Контакты</h1>
+    </div>
+</div>
+
+<section class="contact">
+    <div class="container">
+        <div class="contact__map">
+            <script type="text/javascript"
+                src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU"></script>
+            <div class="map__item-page">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab357b9a67d4a3c88012d0878d9377e677c8b8f30829903a24d78d363a96aa302&amp;source=constructor"
+                    width="500" height="400" frameborder="0"></iframe>
+            </div>
+            <div class="map__contact">
+                <div class="map__contact-item-wrap">
+                    <div class="map__contact-item">
+                        <span class="map__contact-item-title">Наш телефон:</span>
+                        <a href="tel:+78002004816" class="phone-map__contact">+7 800 200-48-16</a>
+                        <p>(бесплатно, по всей России)</p>
+                    </div>
+                    <div class="map__contact-item">
+                        <a href="tel:+73472294665" class="phone-map__contact">+7 347 229-46-65</a>
+                        <p>(Уфа и область)</p>
+                    </div>
+                    <div class="map__contact-item">
+                        <a href="tel:+79612682676" class="phone-map__contact">+7 961 268-26-76</a>
+                        <p>(горячая линия дежурного нарколога)</p>
+                    </div>
+                </div>
+                <div class="map__contact-item-wrap">
+                    <div class="map__contact-item">
+                        <span>Наша почта:</span>
+                        <a href="mailto:lazarevskoe@medcover.ru">lazarevskoe@medcover.ru</a>
+                    </div>
+                </div>
+                <div class="map__contact-item-wrap">
+                    <div class="map__contact-item">
+                        <span>Адрес консультационной службы: </span>
+                        <a href="#">Симферополь, ул. Ленина, д.254</a>
+                    </div>
+                </div>
+                <button class="red-btn map__contact-btn popup-btn change__item-btn change__item-btn_current"
+                data-path="popup__1">Работаем круглосуточно</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="regions section-offset">
+    <div class="container regions__container">
+        <div class="regions__inner-main">
+            <h2 class="section-title regions__title">Наши <br> филиалы</h2>
+            <div class="regions__inner">
+                <div class="regions__wrap">
+                    <div class="regions__item">
+                        <p>улица Мусоргского, 21</p>
+                    </div>
+                    <div class="regions__item">
+                        <p>Первомайская улица, 84/2</p>
+                    </div>
+                </div>
+                <div class="regions__wrap">
+                    <div class="regions__item">
+                        <p>улица Мусоргского, 21</p>
+                    </div>
+                    <div class="regions__item">
+                        <p>Первомайская улица, 84/2</p>
+                    </div>
+                </div>
+                <div class="regions__wrap">
+                    <div class="regions__item">
+                        <p>улица Мусоргского, 21</p>
+                    </div>
+                    <div class="regions__item">
+                        <p>Первомайская улица, 84/2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="callback section-offset offset-bottom">
+    <div class="container callback__container">
+        <form class="callback__form">
+            <h2>Свяжитесь <br> c нами сейчас!</h2>
+            <p>Срочный вызов нарколога на дом</p>
+            <label class="callback__form-label form-label">
+                <input type="tel" class="callback__form-input form__input" placeholder="+7 (___)___-__-__" required>
+            </label>
+            <button class="white-btn callback__form-btn" type="submit">Вызвать специалиста</button>
+        </form>
+        <picture class="callback__picture">
+            <source srcset="assets/img/callback/phone.webp" type="image/webp">
+            <img class="callback__img" src="assets/img/callback/phone.png" loading="lazy" alt="Изображение телефона">
+        </picture>
+    </div>
+</section>
