@@ -42,7 +42,7 @@ npm run zip
 ### Адрес сайта
 
 ```
-https://InnaGlebova.github.io/mk-narkolog-centr/
+https://github.com/InnaGlebova/mk-narkolog-centr/index.html
 ```
 
 Если репозиторий называется иначе — замените `mk-narkolog-centr` на имя репозитория.
