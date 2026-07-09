@@ -15,8 +15,6 @@ npm install
 
 ## Разработка
 
-Запуск сборки и локального сервера с live reload:
-
 ```bash
 npm run dev
 ```
@@ -25,40 +23,35 @@ npm run dev
 
 ## Сборка
 
-Сборка проекта в папку `dist/`:
-
 ```bash
 npm run build
 ```
 
-## Архив для выкладки
+Результат — папка `dist/`.
+
+## Архив для хостинга
 
 ```bash
 npm run zip
 ```
 
-Создаёт `mk-narkolog-centr.zip` из содержимого `dist/`.
+## Деплой на GitHub Pages
+
+Сайт публикуется автоматически при каждом `push` в ветку `main`.
+
+### Адрес сайта
+
+```
+https://InnaGlebova.github.io/mk-narkolog-centr/
+```
+
+Если репозиторий называется иначе — замените `mk-narkolog-centr` на имя репозитория.
 
 ## Структура проекта
 
 ```
 src/           — исходники (HTML, SCSS, JS, изображения, шрифты)
 gulp/          — задачи сборки
-dist/          — результат сборки (не коммитится)
+dist/          — результат сборки (не коммитится, создаётся в CI)
+.github/       — автодеплой на GitHub Pages
 ```
-
-## Публикация на GitHub
-
-1. Создайте репозиторий на GitHub.
-2. В корне проекта:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<user>/<repo>.git
-git push -u origin main
-```
-
-Для деплоя на хостинг используйте содержимое `dist/` после `npm run build`.
