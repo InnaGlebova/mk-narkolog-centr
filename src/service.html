@@ -50,7 +50,7 @@
                     <td class="price__table-name current-title">Имплантация препарата Торпедо 6 месяцев</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
 
                 </tr>
@@ -58,21 +58,21 @@
                     <td class="price__table-name current-title">Снятие кодировки</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
                 <tr class="price__table-item change__item-title">
                     <td class="price__table-name current-title">Кодирование Двойной блок</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
                 <tr class="price__table-item change__item-title">
                     <td class="price__table-name current-title">Кодирование от алкоголизма на дому</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
             </tbody>
@@ -88,28 +88,28 @@
                     <td class="price__table-name current-title">Имплантация препарата Торпедо 6 месяцев</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
                 <tr class="price__table-item change__item-title">
                     <td class="price__table-name current-title">Снятие кодировки</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
                 <tr class="price__table-item change__item-title">
                     <td class="price__table-name current-title">Кодирование Двойной блок</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
                 <tr class="price__table-item change__item-title">
                     <td class="price__table-name current-title">Кодирование от алкоголизма на дому</td>
                     <td class="price__table-price-wrap">
                         <p class="price__table-price">4900 руб.</p>
-                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup__2">Заказать услугу</button>
+                        <button class="popup-btn change__item-btn price__table-btn" data-path="popup-change">Заказать услугу</button>
                     </td>
                 </tr>
             </tbody>
@@ -966,55 +966,87 @@
 
 <section class="consultation section-offset">
     <div class="container consultation__container">
-        <picture class="consultation__picture">
-            <source srcset="assets/img/consultation/phone.webp" type="image/webp">
-            <img class="consultation__img" src="assets/img/consultation/phone.png" loading="lazy"
-                alt="Изображение телефона">
-        </picture>
-        <form class="consultation__form form">
-            <h2>Бесплатная консультация</h2>
-            <p>Оставьте данные и мы вам перезвоним!</p>
-            <label class="consultation__form-label">
-                <input type="text" class="consultation__form-input form__input" placeholder="Имя" required>
-            </label>
-            <label class="consultation__form-label">
-                <input type="tel" class="consultation__form-input form__input" placeholder="+7 (___)___-__-__" required>
-            </label>
-            <button class="standart-btn consultation__form-btn" type="submit">Вызвать специалиста</button>
-        </form>
+        <div class="consultation__inner">
+            <form class="consultation__form form">
+                <h2 class="consultation__title">Бесплатная консультация</h2>
+                <p class="consultation__descr">Оставьте данные и мы вам перезвоним!</p>
+                <label class="consultation__form-label">
+                    <input type="tel" class="consultation__form-input" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <p class="consultation__policy">
+                    Нажимая кнопку я соглашаюсь с <a href="privacy.html">политикой конфиденциальности</a> и
+                    <a href="privacy.html">пользовательским соглашением</a>
+                </p>
+                <button class="standart-btn primary-btn consultation__form-btn" type="submit">Вызвать специалиста</button>
+            </form>
+            <picture class="consultation__picture">
+                <img class="consultation__img" src="assets/img/consultation/consultation.png" loading="lazy"
+                    alt="Врач наркологического центра">
+            </picture>
+        </div>
     </div>
 </section>
 
 <section class="doc-check">
     <div class="container doc-check__container">
-        <div class="doc-check__inner">
-            <div class="doc-check__title-wrap">
-                <h2 class="doc-check__title">Статья проверена врачом</h2>
-                <a href="#" class="doc-check__prodoc-btn">
-                    <picture class="doc-check__prodoc-picture">
-                        <source srcset="assets/img/icons/prodoc.svg" type="image/svg+xml">
-                        <img class="doc-check__prodoc-img" src="assets/img/icons/prodoc.png" alt="" loading="lazy">
+        <div class="doc-check__cards">
+            <article class="doc-check__card">
+                <p class="doc-check__card-label">Статья написана:</p>
+                <div class="doc-check__card-top">
+                    <picture class="doc-check__card-picture">
+                        <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                        <img class="doc-check__card-img" src="assets/img/doctors/3.png" loading="lazy"
+                            alt="Фото доктора" />
                     </picture>
-                </a>
-            </div>
-            <a class="doc-check__wrap">
-                <picture class="doc-check__picture">
-                    <source srcset="assets/img/doctors/3.webp" type="image/webp">
-                    <img class="doc-check__img" src="assets/img/doctors/3.png" loading="lazy" alt="Фото доктора">
-                </picture>
-                <div class="doc-check__wrap-info">
-                    <p class="doc-check__name">Пета Алексей Валерьевич</p>
-                    <p class="doc-check__pos">Должность: <span>Психиатр-нарколог</span></p>
-                    <p class="doc-check__stages">Стаж: <span>2 года</span></p>
-                    <p class="doc-check__date">Дата обновления статьи: <span>16.04.2022</span></p>
+                    <div class="doc-check__card-info">
+                        <p class="doc-check__card-name">Бурматов Виктор Алексеевич</p>
+                        <p class="doc-check__card-pos">
+                            Нарколог <span>Высшая категория</span>
+                        </p>
+                        <p class="doc-check__card-edu">МГ УМ. М.В. Ломоносова</p>
+                    </div>
                 </div>
-            </a>
+                <div class="doc-check__card-meta">
+                    <p class="doc-check__card-meta-item">
+                        Стаж работы: <span>15 лет</span>
+                    </p>
+                    <p class="doc-check__card-meta-item">
+                        Дата публикации: <span>2026-05-25</span>
+                    </p>
+                </div>
+            </article>
+
+            <article class="doc-check__card">
+                <p class="doc-check__card-label">Статья проверена:</p>
+                <div class="doc-check__card-top">
+                    <picture class="doc-check__card-picture">
+                        <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                        <img class="doc-check__card-img" src="assets/img/doctors/3.png" loading="lazy"
+                            alt="Фото доктора" />
+                    </picture>
+                    <div class="doc-check__card-info">
+                        <p class="doc-check__card-name">Каримов Павиль Рамилович</p>
+                        <p class="doc-check__card-pos">
+                            Главный врач <span>Высшая категория</span>
+                        </p>
+                        <p class="doc-check__card-edu">Первый МГМУ им. И.М. Сеченова</p>
+                    </div>
+                </div>
+                <div class="doc-check__card-meta">
+                    <p class="doc-check__card-meta-item">
+                        Стаж работы: <span>19 лет</span>
+                    </p>
+                    <p class="doc-check__card-meta-item">
+                        Дата проверки: <span>2026-05-25</span>
+                    </p>
+                </div>
+            </article>
         </div>
     </div>
 
 </section>
 
-<section class="faq section-offset offset-bottom">
+<section class="faq section-offset section-offset">
     <div class="container faq__container hide-items">
         <h2 class="section-title faq__title">Часто задаваемые вопросы о лечении алкоголизма в г. Уфа</h2>
         <div class="hide-item faq__hide-item">

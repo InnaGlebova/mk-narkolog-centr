@@ -1,144 +1,128 @@
-/* dock-check */
+/* doc-check (две карточки) */
 
 .doc-check {
     margin: 80px 0;
 }
 
-.doc-check__inner {
+.doc-check__cards {
     display: flex;
     gap: 32px;
     justify-content: space-between;
+    align-items: stretch;
 }
 
-.doc-check__title-wrap {
+.doc-check__card {
+    flex: 1 1 0;
+    padding: 26px 26px 20px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #E2E2E2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 32px;
-    max-width: 448px;
-    width: 100%;
 }
 
-.doc-check__wrap {
+.doc-check__card-label {
+    margin: 0 0 14px;
+    color: var(--content-black);
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.doc-check__card-top {
     display: flex;
-    gap: 26px;
-    max-width: 640px;
-    width: 100%;
+    gap: 16px;
+    align-items: flex-start;
 }
 
-.doc-check__title {
-    color: var(--primary-blue, #DB0F00);
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 40px;
-    line-height: 1.1;
+.doc-check__card-picture {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #F0F1F4;
 }
 
-.doc-check__prodoc-img {
-    max-width: 155px;
-    max-height: 24px;
-    width: 100%;
-    height: 100%;
-}
-
-.doc-check__img {
-    max-width: 150px;
-    max-height: 150px;
+.doc-check__card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.doc-check__wrap-info {
-    padding: 10px;
-    width: 100%;
+.doc-check__card-info {
+    flex: 1;
+    min-width: 0;
 }
 
-.doc-check__name {
-    color: var(--content-black);
+.doc-check__card-name {
+    margin: 0;
+    color: var(--content-blue);
     font-family: 'Inter Tight', sans-serif;
-    font-size: 26px;
-    line-height: 1.1;
-    padding-bottom: 10px;
-    position: relative;
-
-    &::before {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 100%;
-        background-color: #757575;
-        height: 1px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+    font-size: 18px;
+    line-height: 1.15;
+    font-weight: 700;
 }
 
-.doc-check__pos {
-    padding-top: 10px;
-    margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.50);
-    font-size: 14px;
+.doc-check__card-pos {
+    margin: 6px 0 6px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 1.3;
 
-    &>span {
+    & > span {
         color: var(--content-black);
+        font-weight: 600;
     }
 }
 
-.doc-check__stages {
-    margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.50);
-    font-size: 14px;
+.doc-check__card-edu {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 1.3;
+}
 
-    &>span {
+.doc-check__card-meta {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid #E2E2E2;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.doc-check__card-meta-item {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    & > span {
         color: var(--content-black);
+        font-weight: 600;
     }
 }
-
-.doc-check__date {
-    color: rgba(0, 0, 0, 0.50);
-    font-size: 14px;
-
-    &>span {
-        color: var(--content-black);
-    }
-}
-
-/* doc-chek media */
 
 @media (max-width: 650px) {
-    .doc-check__inner {
+    .doc-check__cards {
         flex-direction: column;
         gap: 20px;
     }
 
-    .doc-check__title-wrap {
-        gap: 10px;
+    .doc-check__card {
+        padding: 22px 18px 18px;
     }
 
-    .doc-check__wrap {
+    .doc-check__card-meta {
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
+        padding-top: 14px;
     }
 
-    .doc-check__img {
-        max-height: 193px;
-        max-width: 193px;
-    }
-
-    .doc-check__name {
-        font-size: 20px;
-    }
-
-    .doc-check__name:before {
-        display: none;
-    }
-
-    .doc-check__wrap-info {
-        border-left: 1px solid #757575;
-    }
-
-    .doc-check__pos {
-        padding-top: 0;
+    .doc-check__card-meta-item {
+        white-space: normal;
     }
 }

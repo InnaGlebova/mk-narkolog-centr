@@ -107,7 +107,7 @@
 </section>
 
 
-<section class="callback section-offset offset-bottom">
+<section class="callback section-offset section-offset">
     <div class="container callback__container">
         <form class="callback__form">
             <h2>Свяжитесь <br> c нами сейчас!</h2>
@@ -188,23 +188,25 @@
     </div>
 </section>
 
-<section class="consultation section-offset offset-bottom">
+<section class="consultation section-offset section-offset">
     <div class="container consultation__container">
-        <picture class="consultation__picture">
-            <source srcset="assets/img/consultation/phone.webp" type="image/webp">
-            <img class="consultation__img" src="assets/img/consultation/phone.png" loading="lazy"
-                alt="Изображение телефона">
-        </picture>
-        <form class="consultation__form form">
-            <h2>Бесплатная консультация</h2>
-            <p>Оставьте данные и мы вам перезвоним!</p>
-            <label class="consultation__form-label">
-                <input type="text" class="consultation__form-input form__input" placeholder="Имя" required>
-            </label>
-            <label class="consultation__form-label">
-                <input type="tel" class="consultation__form-input form__input" placeholder="+7 (___)___-__-__" required>
-            </label>
-            <button class="standart-btn consultation__form-btn" type="submit">Вызвать специалиста</button>
-        </form>
+        <div class="consultation__inner">
+            <form class="consultation__form form">
+                <h2 class="consultation__title">Бесплатная консультация</h2>
+                <p class="consultation__descr">Оставьте данные и мы вам перезвоним!</p>
+                <label class="consultation__form-label">
+                    <input type="tel" class="consultation__form-input" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <p class="consultation__policy">
+                    Нажимая кнопку я соглашаюсь с <a href="privacy.html">политикой конфиденциальности</a> и
+                    <a href="privacy.html">пользовательским соглашением</a>
+                </p>
+                <button class="standart-btn primary-btn consultation__form-btn" type="submit">Вызвать специалиста</button>
+            </form>
+            <picture class="consultation__picture">
+                <img class="consultation__img" src="assets/img/consultation/consultation.png" loading="lazy"
+                    alt="Врач наркологического центра">
+            </picture>
+        </div>
     </div>
 </section>

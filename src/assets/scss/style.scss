@@ -26,7 +26,7 @@ body {
   line-height: 1.3;
   color: var(--content-black);
   font-size: 16px;
-  background: var(--background-lightblue);
+  background: #ffffff;
   font-family: "Inter Tight", sans-serif;
   overflow-x: hidden;
 
@@ -198,11 +198,7 @@ tbody {
 }
 
 .section-offset {
-  margin-top: 90px;
-}
-
-.offset-bottom {
-  margin-bottom: 90px;
+  margin-bottom: 180px;
 }
 
 .section-title {
@@ -385,11 +381,7 @@ tbody {
 
 @media (max-width: 1024px) {
   .section-offset {
-    margin-top: 70px;
-  }
-
-  .offset-bottom {
-    margin-bottom: 70px;
+    margin-bottom: 140px;
   }
 
   .section-title {
@@ -413,10 +405,6 @@ tbody {
 
 @media (max-width: 768px) {
   .section-offset {
-    margin-top: 50px;
-  }
-
-  .offset-bottom {
     margin-bottom: 50px;
   }
   .breadcrumbs,
@@ -497,5 +485,9 @@ tbody {
 @import "vendor/_tabs";
 @import "vendor/_articles";
 @import "vendor/_404";
+@import "vendor/_departure";
+@import "vendor/_what";
+@import "vendor/_installment";
+@import "vendor/_rating";
 @import "vendor/_header";
 @import "vendor/_footer";

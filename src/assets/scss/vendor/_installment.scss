@@ -1,0 +1,188 @@
+/* installment */
+
+.installment__container {
+    overflow: visible;
+}
+
+.installment__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+    align-items: end;
+    gap: 24px;
+    min-height: 320px;
+    margin-top: 36px;
+    padding: 48px 40px 0;
+    border-radius: 32px;
+    background-color: var(--primary-blue);
+    overflow: visible;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 180' fill='none'%3E%3Cpath d='M0 90H70L88 34L106 126L124 58L142 90H220' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.18'/%3E%3Cpath d='M180 90H250L268 34L286 126L304 58L322 90H400' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.12'/%3E%3Cpath d='M360 90H430L448 34L466 126L484 58L502 90H560' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.08'/%3E%3C/svg%3E") right center / auto 70% no-repeat;
+        pointer-events: none;
+    }
+}
+
+.installment__content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    padding-bottom: 48px;
+}
+
+.installment__title {
+    margin: 0 0 12px;
+    color: var(--content-white);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.installment__descr {
+    margin: 0 0 28px;
+    color: var(--content-white);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.installment__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.installment__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.installment__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 96px;
+    padding: 16px 12px;
+    border-radius: 16px;
+    background-color: var(--content-white);
+    text-align: center;
+}
+
+.installment__card-value {
+    margin-bottom: 4px;
+    color: var(--content-blue);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.installment__card-label {
+    color: var(--content-blue);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.installment__btn {
+    min-width: 220px;
+    padding-inline: 40px;
+}
+
+.installment__picture {
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: min(360px, 34vw);
+    pointer-events: none;
+}
+
+.installment__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(-36px);
+    mix-blend-mode: lighten;
+}
+
+/* installment media */
+
+@media (max-width: 1024px) {
+    .installment__inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 36px 28px 0;
+        border-radius: 24px;
+    }
+
+    .installment__content {
+        padding-bottom: 0;
+    }
+
+    .installment__title {
+        font-size: 28px;
+    }
+
+    .installment__descr {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+
+    .installment__picture {
+        position: static;
+        width: min(320px, 100%);
+        margin: 0 auto -8px;
+    }
+
+    .installment__img {
+        transform: none;
+        mix-blend-mode: normal;
+    }
+}
+
+@media (max-width: 650px) {
+    .installment__inner {
+        margin-top: 0;
+        padding: 28px 20px 0;
+        border-radius: 20px;
+    }
+
+    .installment__title {
+        font-size: 24px;
+    }
+
+    .installment__cards {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+
+    .installment__card {
+        min-height: 84px;
+    }
+
+    .installment__card-value {
+        font-size: 24px;
+    }
+
+    .installment__btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .installment__picture {
+        width: min(280px, 100%);
+    }
+}

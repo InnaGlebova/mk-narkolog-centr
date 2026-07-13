@@ -224,6 +224,42 @@ if (stockCheck.length > 0) {
     });
 }
 
+const articlesCheck = document.querySelectorAll('.articles');
+if (articlesCheck.length > 0) {
+    articlesCheck.forEach((slider) => {
+        const swiperArticles = new Swiper(slider.querySelector('.articles__swiper'), {
+            direction: 'horizontal',
+            effect: 'slide',
+            navigation: {
+                nextEl: slider.querySelector('.articles-button__next'),
+                prevEl: slider.querySelector('.articles-button__prev'),
+            },
+            pagination: {
+                el: '.articles__pagination',
+                clickable: true,
+            },
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 10,
+            breakpoints: {
+                1300: {
+                    slidesPerView: 3,
+                    spaceBetween: 32,
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                550: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 16,
+                },
+            }
+        });
+
+    });
+}
+
 
 
 const reviewsCheck = document.querySelectorAll('.reviews');
@@ -289,6 +325,27 @@ if (galleryCheck.length > 0) {
             }
         });
 
+    });
+}
+
+const conditionsCheck = document.querySelectorAll('.conditions');
+if (conditionsCheck.length > 0) {
+    conditionsCheck.forEach((slider) => {
+        new Swiper(slider.querySelector('.conditions__swiper'), {
+            direction: 'horizontal',
+            effect: 'slide',
+            navigation: {
+                nextEl: slider.querySelector('.conditions-button__next'),
+                prevEl: slider.querySelector('.conditions-button__prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.conditions__pagination'),
+                clickable: true,
+            },
+            slidesPerView: 1,
+            spaceBetween: 0,
+            grabCursor: true,
+        });
     });
 }
 
@@ -535,20 +592,25 @@ if (tabsWrapper.length > 0) {
 
 function popupClose(popupActive) {
     popupActive.classList.remove('open');
-    document.querySelector('html').removeAttribute('style');
+    setTimeout(() => {
+        if (!popupActive.classList.contains('open')) {
+            popupActive.classList.remove('active');
+        }
+    }, 400);
+    document.body.classList.remove('lock');
+    document.querySelector('html').style.paddingRight = 0;
     document.querySelector('html').classList.remove('lock');
+    document.querySelector('header').removeAttribute('style');
+
+
 }
 const popupOpenBtns = document.querySelectorAll('.popup-btn');
 const popups = document.querySelectorAll('.popup');
+const originalTitlePopup2 = document.querySelector('.original-title').innerHTML;
 const closePopupBtns = document.querySelectorAll('.close-popup');
-const originalTitlePopup2 = document.querySelector('.original-title');
-if (originalTitlePopup2) {
-    var oldOriginalTitlePopup2 = originalTitlePopup2.innerHTML;
-}
 closePopupBtns.forEach(function (el) {
     el.addEventListener('click', function (e) {
         popupClose(e.target.closest('.popup'));
-
     });
 });
 popupOpenBtns.forEach(function (el) {
@@ -565,51 +627,61 @@ popupOpenBtns.forEach(function (el) {
                     }
                 });
             });
+            currentPopup.classList.add('active');
+            setTimeout(() => {
+                currentPopup.classList.add('open');
+            }, 10);
+            if (currentPopup.getAttribute('data-target') == 'popup-change') {
 
-            currentPopup.classList.add('open');
-            if (currentPopup.getAttribute('data-target') == 'popup__2') {
                 let originaTitle = currentPopup.querySelector('.original-title');
+                if (el.classList.contains('change-item__btn')) {
 
-                if (el.classList.contains('change__item-btn')) {
-                    let originaTitle = currentPopup.querySelector('.original-title');
-                    if (el.classList.contains('change__item-btn_current')) {
-                        originaTitle.textContent = el.textContent;
+                    if (el.classList.contains('doctors__btn-js')) {
+                        let currentItem = el.closest('.change-item');
+                        let currentTitile = currentItem.querySelector('.change-item__title');
+                        originaTitle.innerHTML = 'Записаться на приём к врачу: <span>' + currentTitile.innerHTML + '</span>'
                     }
                     else {
-                        let currentItem = el.closest('.change__item-title');
-                        if (currentItem) {
-                            if (currentItem.classList.contains('doctor__container')) {
-                                originaTitle.textContent = 'Записаться к врачу:' + currentItem.querySelector('.current-title').textContent;
-                            }
-                            else {
-                                originaTitle.textContent = currentItem.querySelector('.current-title').textContent;
-                            }
+                        if (el.classList.contains('change-item__btn_current')) {
+                            originaTitle.textContent = el.textContent;
                         }
-
+                        else {
+                            let currentItem = el.closest('.change-item');
+                            let currentTitile = currentItem.querySelector('.change-item__title');
+                            originaTitle.innerHTML = currentTitile.innerHTML
+                        }
                     }
-
                 }
                 else {
-                    originaTitle.innerHTML = oldOriginalTitlePopup2;
+                    originaTitle.innerHTML = originalTitlePopup2;
                 }
             }
-            if (el.classList.contains('reviews__btn')) {
-                let currentItem = el.closest('.reviews__item')
-                let originalTop = currentPopup.querySelector('.reviews__top_original');
-                let originalDate = currentPopup.querySelector('.reviews__date_original');
-                let originalText = currentPopup.querySelector('.reviews__text_original');
-                originalTop.innerHTML = currentItem.querySelector('.reviews__top').innerHTML;
-                originalText.innerHTML = currentItem.querySelector('.reviews__text').innerHTML;
-                originalDate.innerHTML = currentItem.querySelector('.reviews__date').innerHTML;
-
+            if (currentPopup.getAttribute('data-target') === 'popup-reviews') {
+                const reviewCard = el.closest('.reviews__item');
+                if (reviewCard) {
+                    const picSrc = currentPopup.querySelector('.popup-reviews__picture');
+                    const nameEl = currentPopup.querySelector('.popup-reviews__name');
+                    const ratingEl = currentPopup.querySelector('.popup-reviews__raiting');
+                    const textEl = currentPopup.querySelector('.popup-reviews__text');
+                    const cardPic = reviewCard.querySelector('.reviews__picture');
+                    const cardName = reviewCard.querySelector('.reviews__name');
+                    const cardRating = reviewCard.querySelector('.reviews__raiting');
+                    const cardText = reviewCard.querySelector('.reviews__text');
+                    if (picSrc && cardPic) picSrc.innerHTML = cardPic.innerHTML;
+                    if (nameEl && cardName) nameEl.textContent = cardName.textContent;
+                    if (ratingEl && cardRating) ratingEl.innerHTML = cardRating.innerHTML;
+                    if (textEl && cardText) textEl.innerHTML = cardText.innerHTML;
+                }
             }
             scrollWidthFunc();
             document.querySelector('html').classList.add('lock');
         }
-
     });
 });
-/* End popups */
+
+/* end popups */
+
+
 const panelItems = document.querySelectorAll('.panels');
 if (panelItems.length > 0) {
     panelItems.forEach((elem) => {

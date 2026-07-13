@@ -1,0 +1,103 @@
+/* rating */
+
+.rating__title {
+    margin-bottom: 40px;
+}
+
+.rating__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.rating__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 148px;
+    padding: 28px 20px 24px;
+    border-radius: 12px;
+    background-color: var(--background-lightpink);
+}
+
+.rating__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 32px;
+}
+
+.rating__logo-img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 28px;
+    object-fit: contain;
+}
+
+.rating__logo-img_yandex {
+    height: 24px;
+}
+
+.rating__logo-img_google {
+    height: 26px;
+}
+
+.rating__logo-img_zoon {
+    height: 22px;
+}
+
+.rating__logo-img_2gis {
+    height: 26px;
+}
+
+.rating__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    background-color: var(--content-white);
+}
+
+.rating__star {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.rating__value {
+    color: var(--content-blue);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* rating media */
+
+@media (max-width: 1024px) {
+    .rating__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rating__title {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .rating__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rating__card {
+        min-height: 132px;
+        padding: 24px 20px;
+        gap: 20px;
+    }
+}
