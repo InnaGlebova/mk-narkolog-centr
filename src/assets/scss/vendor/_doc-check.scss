@@ -1,30 +1,39 @@
 /* doc-check (две карточки) */
 
 .doc-check {
-    margin: 80px 0;
+    padding: 60px 0 180px 0;
 }
 
 .doc-check__cards {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     justify-content: space-between;
     align-items: stretch;
 }
 
 .doc-check__card {
     flex: 1 1 0;
-    padding: 26px 26px 20px;
-    border-radius: 16px;
+    padding: 30px;
+    border-radius: 20px;
     background: #fff;
-    border: 1px solid #E2E2E2;
+    border: 1px solid #38416133;
     display: flex;
     flex-direction: column;
+    transition: border-color 0.3s linear;
+}
+
+.doc-check__card:hover {
+    border-color: var(--primary-coral);
+
+    .doc-check__card-name {
+        color: var(--primary-coral);
+    }
 }
 
 .doc-check__card-label {
     margin: 0 0 14px;
     color: var(--content-black);
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.2;
     font-weight: 400;
 }
@@ -37,11 +46,11 @@
 
 .doc-check__card-picture {
     flex-shrink: 0;
-    width: 52px;
-    height: 52px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     overflow: hidden;
-    background: #F0F1F4;
+    background: var(--primary-blue);
 }
 
 .doc-check__card-img {
@@ -49,6 +58,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    object-position: bottom center;
 }
 
 .doc-check__card-info {
@@ -59,19 +69,18 @@
 .doc-check__card-name {
     margin: 0;
     color: var(--content-blue);
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.15;
     font-weight: 700;
+    transition: color 0.3s linear;
 }
 
 .doc-check__card-pos {
-    margin: 6px 0 6px;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
+    margin: 10px 0 10px;
+    color: var(--content-black);
     line-height: 1.3;
 
-    & > span {
+    &>span {
         color: var(--content-black);
         font-weight: 600;
     }
@@ -79,15 +88,15 @@
 
 .doc-check__card-edu {
     margin: 0;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
+    color: var(--content-black);
     line-height: 1.3;
 }
 
 .doc-check__card-meta {
     margin-top: auto;
-    padding-top: 18px;
-    border-top: 1px solid #E2E2E2;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #38416133;
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -95,15 +104,10 @@
 
 .doc-check__card-meta-item {
     margin: 0;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
+    color: var(--content-black);
+    font-size: 18px;
     line-height: 1.3;
     white-space: nowrap;
-
-    & > span {
-        color: var(--content-black);
-        font-weight: 600;
-    }
 }
 
 @media (max-width: 650px) {

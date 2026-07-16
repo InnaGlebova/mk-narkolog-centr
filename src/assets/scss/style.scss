@@ -192,13 +192,24 @@ tbody {
   color: var(--primary-coral);
   border-color: var(--primary-coral);
 }
+
 .secondary-btn:hover {
   background: var(--content-white);
   color: var(--primary-coral);
 }
 
+.bg-grey {
+  background: #F9F9F9;
+
+}
+
 .section-offset {
   margin-bottom: 180px;
+}
+
+.section-padding {
+  padding-top: 180px;
+  padding-bottom: 180px;
 }
 
 .section-title {
@@ -290,32 +301,26 @@ tbody {
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
-  padding: 0 0 71px 0;
+  padding: 0 0 90px 0;
   margin-bottom: 60px;
   z-index: -1;
   object-fit: cover;
   width: 100%;
   max-height: 200px;
+  background-color: var(--primary-blue);
 
-  background:
-    url("../img/bg.webp"),
-    center center no-repeat;
+  margin-bottom: 120px;
 
-  margin-bottom: 80px;
-
-  @supports not (background: url("../img/bg.webp")) {
-    background:
-      url("../img/bg.webp"),
-      center center no-repeat;
-  }
 
   & h1 {
-    color: var(--primary-blue);
-    font-family: "Inter Tight", sans-serif;
-    font-size: 58px;
+    color: var(--content-white);
+    font-size: 55px;
+    font-weight: 600;
     line-height: 1;
-    text-align: center;
+    text-align: left;
     z-index: 2;
+    margin-top: 60px;
+    padding-bottom: 40px;
   }
 }
 
@@ -384,6 +389,11 @@ tbody {
     margin-bottom: 140px;
   }
 
+  .section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
   .section-title {
     font-size: 30px;
     margin-bottom: 40px;
@@ -407,6 +417,12 @@ tbody {
   .section-offset {
     margin-bottom: 50px;
   }
+
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .breadcrumbs,
   .breadcrumbs2 {
     padding-top: 14px;

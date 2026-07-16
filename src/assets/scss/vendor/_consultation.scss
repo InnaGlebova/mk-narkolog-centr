@@ -6,8 +6,7 @@
 
 .consultation__inner {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(320px, 420px) minmax(260px, 1fr);
+    display: flex;
     align-items: center;
     gap: 24px;
     min-height: 360px;
@@ -20,11 +19,30 @@
     &::before {
         content: "";
         position: absolute;
-        inset: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         border-radius: inherit;
-        background:
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 180' fill='none'%3E%3Cpath d='M0 90H70L88 34L106 126L124 58L142 90H220' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.18'/%3E%3Cpath d='M180 90H250L268 34L286 126L304 58L322 90H400' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.12'/%3E%3Cpath d='M360 90H430L448 34L466 126L484 58L502 90H560' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='.08'/%3E%3C/svg%3E") right center / auto 70% no-repeat;
+        background: url(../img/decor5.png) center / cover no-repeat;
         pointer-events: none;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: url(../img/decor4.png) center / cover no-repeat;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        max-width: 827px;
+        z-index: 1;
     }
 }
 
@@ -35,25 +53,25 @@
     flex-direction: column;
     align-self: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 601px;
     margin-bottom: 40px;
-    padding: 32px;
+    padding: 40px;
     border-radius: 20px;
     background-color: var(--content-white);
 }
 
 .consultation__title {
-    margin: 0 0 8px;
+    margin: 0 0 5px;
     color: var(--content-blue);
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 600;
     line-height: 1.15;
 }
 
 .consultation__descr {
-    margin: 0 0 20px;
-    color: var(--content-grey);
-    font-size: 14px;
+    margin: 0 0 25px;
+    color: var(--content-black);
+    font-size: 18px;
     line-height: 1.4;
 }
 
@@ -64,11 +82,11 @@
 
 .consultation__form-input {
     width: 100%;
-    padding: 15px 20px;
-    border: 1px solid #e2e2e2;
-    border-radius: 12px;
+    padding: 19px 24px;
+    border: 1px solid #38416133;
+    border-radius: 30px;
     background-color: var(--content-white);
-    color: var(--content-black);
+    color: var(--content-grey);
     font-family: inherit;
     font-size: 16px;
     line-height: 1.4;
@@ -80,10 +98,10 @@
 
 .consultation__policy {
     position: relative;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     padding-left: 22px;
     color: var(--content-grey);
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
 
     &::before {
@@ -91,11 +109,11 @@
         position: absolute;
         left: 0;
         top: 2px;
-        width: 14px;
-        height: 14px;
-        border: 1px solid #e2e2e2;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #384161;
         border-radius: 50%;
-        background-color: var(--content-white);
+        background-color: #384161;
         box-shadow: inset 0 0 0 3px var(--content-white), inset 0 0 0 5px var(--primary-blue);
     }
 
@@ -111,22 +129,22 @@
 }
 
 .consultation__picture {
+
     position: absolute;
-    right: 24px;
+    right: 118px;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     display: block;
-    width: min(380px, 36vw);
     pointer-events: none;
+    max-width: 393px;
 }
 
 .consultation__img {
     display: block;
     width: 100%;
     height: auto;
+    -o-object-fit: contain;
     object-fit: contain;
-    transform: translateY(-24px);
-    mix-blend-mode: lighten;
 }
 
 /* consultation media */
