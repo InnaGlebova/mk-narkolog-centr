@@ -1,0 +1,645 @@
+<div class="title__bg">
+    <div class="container">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li>Калькулятор</li>
+        </ul>
+        <h1>Калькулятор стоимости услуг</h1>
+        <div class="title__bg-descr">
+            <p>Ответьте на несколько вопросов — и сразу увидите, с какого формата помощи лучше начать.</p>
+        </div>
+    </div>
+</div>
+
+<section class="calculator section-offset">
+    <div class="container">
+        <div class="calc">
+            <div class="calc__head">
+                <span class="calc__badge">Среднее время заполнения: 1 минута</span>
+                <p class="calc__descr">Чем точнее заполнены поля, тем полезнее будет результат. Ответьте на несколько вопросов — и сразу увидите, с какого формата помощи лучше начать.</p>
+            </div>
+
+            <form method="post" class="calc__form">
+                <div class="calc__grid">
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Пол пациента</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-value="0" data-type="sex">Мужчина</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_2">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="sex" data-value="0" type="radio" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Мужчина</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="sex" data-value="0" type="radio" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Женщина</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Что употребляет</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-value="420" data-type="addiction">Алкоголь</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_3">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="addiction" data-value="420" type="radio" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Алкоголь</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="addiction" type="radio" data-value="1120" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Наркотики</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="addiction" type="radio" data-value="2020" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Алкоголь + наркотики</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item calc__block-range">
+                        <div class="calc__inf">
+                            <p class="calc__title">Возраст пациента</p>
+                            <p class="calc-range__value" data-value="675" data-type="age">45 лет</p>
+                        </div>
+                        <label class="calc__label calc-range">
+                            <input class="calc-range__input styled-slider slider-progress" type="range" min="14" max="69" step="1" value="45">
+                        </label>
+                        <div class="calc__range-values">
+                            <span class="calc__range-value">14</span>
+                            <span class="calc__range-value">25</span>
+                            <span class="calc__range-value">36</span>
+                            <span class="calc__range-value">47</span>
+                            <span class="calc__range-value">58</span>
+                            <span class="calc__range-value">69</span>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item calc__block-range">
+                        <div class="calc__inf">
+                            <p class="calc__title">Стаж употребления</p>
+                            <p class="calc-range__value" data-value="105" data-type="addict_exp">7 лет</p>
+                        </div>
+                        <label class="calc__label calc-range">
+                            <input class="calc-range__input styled-slider slider-progress" type="range" min="1" max="20" step="1" value="7">
+                        </label>
+                        <div class="calc__range-values">
+                            <span class="calc__range-value">1</span>
+                            <span class="calc__range-value">5</span>
+                            <span class="calc__range-value">10</span>
+                            <span class="calc__range-value">15</span>
+                            <span class="calc__range-value">20</span>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item calc__block-item_full">
+                        <p class="calc__title">Какая услуга необходима сейчас</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-value="800" data-type="service">Прервать запой</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_4">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="service" data-value="800" type="radio" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Прервать запой</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="service" type="radio" data-value="400" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Консультация врача</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="service" type="radio" data-value="1200" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Закодироваться</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="service" type="radio" data-value="500" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Снять похмелье</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Место оказания услуги</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-value="600" data-type="place">Выезд</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_2">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="place" data-value="600" type="radio" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Выезд</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="place" type="radio" data-value="900" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">В стационаре</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Проходил ли ранее лечение</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-value="500" data-type="care_exp">Детоксикация</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_3">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="oldCases" type="radio" data-value="500" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Детоксикация</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="oldCases" type="radio" data-value="150" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Реабилитация</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="oldCases" type="radio" data-value="900" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Не лечился</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Сопутствующие заболевания</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-type="illness" data-value="350">Нет</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_3">
+                                <label class="calc__label calc-radio">
+                                    <input checked name="illness" type="radio" data-value="350" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Нет</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="illness" type="radio" data-value="1500" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Есть</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="illness" type="radio" data-value="600" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Неизвестно</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc__block-wrap calc__block-item">
+                        <p class="calc__title">Занятость</p>
+                        <div class="calc__select">
+                            <button type="button" class="calc__select-btn">
+                                <span class="calc__selected-value" data-type="status" data-value="600">Учится</span>
+                            </button>
+                            <div class="calc__label-wrapper calc__label-wrapper_3">
+                                <label class="calc__label calc-radio">
+                                    <input name="status" type="radio" data-value="1000" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Работает</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input checked name="status" type="radio" data-value="600" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Учится</span>
+                                    </span>
+                                </label>
+                                <label class="calc__label calc-radio">
+                                    <input name="status" type="radio" data-value="250" class="calc-radio__input visually-hidden">
+                                    <span class="calc-radio__text-wrap">
+                                        <span class="calc-radio__text">Не занят</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calc__result-block calc-result">
+                <div class="calc-result__wrap">
+                    <div class="calc-result__block">
+                        <p class="calc__result-title">Рекомендуемый метод лечения:</p>
+                        <p class="calc__result-text">Детоксикация под наблюдением врача</p>
+                    </div>
+                    <div class="calc-result__block">
+                        <p class="calc__result-title">Примерная цена:</p>
+                        <p class="calc__result-text calc-result__price">от 2 095 руб.</p>
+                        <p class="calc-result__note">Стоимость зависит от тяжести состояния.</p>
+                    </div>
+                    <div class="calc-result__actions">
+                        <button class="standart-btn primary-btn calc-result__btn popup-btn" type="button" data-path="popup-change">
+                            Заказать консультацию
+                        </button>
+                        <p class="calc-result__call-text">Если нужна срочная услуга — звоните</p>
+                        <a class="calc-result__phone" href="tel:88002004816">
+                            <img src="assets/img/icons/phone.svg" alt="" width="16" height="16">
+                            8 800 200-48-16
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    for (let e of document.querySelectorAll('.calc-range__input')) {
+        e.style.setProperty('--value', e.value);
+        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+    }
+</script>
+
+<section class="faq section-offset">
+    <div class="container faq__container hide-items">
+      <h2 class="section-title faq__title">Часто задаваемые вопросы</h2>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Не хочу, чтобы о моем обращении в клинику знали, как вы сохраняете
+            анонимность пациентов?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Клиника работает с соблюдением закона о врачебной тайне.
+                  Информация о пациентах не передается третьим лицам. Обращение
+                  полностью анонимно, без постановки на учет и уведомления
+                  родственников или работодателя.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Можно ли получить консультацию нарколога бесплатно?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Первичную консультацию можно получить бесплатно: мы оценим
+                  ситуацию, ответим на вопросы и подскажем подходящий формат
+                  помощи. Стоимость дальнейшего лечения обсуждается заранее.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            У вас есть лицензии на медицинскую деятельность?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Да, клиника работает на основании действующей медицинской
+                  лицензии. Документы можно посмотреть на сайте в разделе лицензий
+                  или запросить у администратора.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Поставят ли меня на наркологический учет после консультации?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Нет. Частная клиника не ставит пациентов на наркологический
+                  учет. Обращение остается конфиденциальным и не передается в
+                  государственные органы.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Я могу вызвать бригаду медиков в выходные или праздники? А ночью?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Да, выездная бригада работает круглосуточно, включая выходные и
+                  праздники. Можно вызвать помощь в любое время дня и ночи.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Как рассчитывается стоимость терапии?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Стоимость зависит от выбранной программы, длительности курса и
+                  состояния пациента. После консультации врач предложит план
+                  лечения и озвучит прозрачную смету без скрытых платежей.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Нужно ли согласие родственников на лечение?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Для совершеннолетнего пациента достаточно его собственного
+                  согласия. Родственников уведомляем только по желанию пациента.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Сколько длится курс лечения в клинике?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Длительность курса подбирается индивидуально: от нескольких дней
+                  при детоксе до нескольких недель при комплексной реабилитации.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Можно ли пройти лечение анонимно без документов?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Да, лечение можно пройти анонимно. Персональные данные
+                  используются только внутри клиники и не передаются третьим
+                  лицам.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hide-item faq__hide-item">
+        <button class="hide-item__title faq__hide-item__title" type="button">
+          <span class="head-name faq__head-name">
+            Что взять с собой при госпитализации?
+          </span>
+        </button>
+        <div class="hide-item__content faq_hide-item__content">
+          <div class="hide-item_max-height faq-hide-item_max-height">
+            <div class="faq__answer">
+              <picture class="faq__answer-photo">
+                <source srcset="assets/img/doctors/3.webp" type="image/webp" />
+                <img
+                  class="faq__answer-img"
+                  src="assets/img/doctors/3.png"
+                  loading="lazy"
+                  alt="Бурматов Виктор Алексеевич"
+                />
+              </picture>
+              <div class="faq__answer-body">
+                <p class="faq__answer-author">
+                  Ответил(а):
+                  <span>Бурматов Виктор Алексеевич</span>
+                </p>
+                <p class="faq__answer-text">
+                  Обычно достаточно сменной одежды, средств гигиены и документов.
+                  Полный список подскажет администратор при записи.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button
+        class="faq__btn faq__btn--more standart-btn primary-btn"
+        type="button"
+      >
+        Показать еще
+      </button>
+    </div>
+  </section>
+
+{{> consultation }}

@@ -1,0 +1,158 @@
+/* sitemap */
+
+.sitemap {
+  color: var(--content-black);
+}
+
+.sitemap__nav,
+.sitemap__services,
+.sitemap__legal {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #38416133;
+}
+
+.sitemap__legal {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.sitemap__nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px 20px;
+}
+
+.sitemap__nav-col,
+.sitemap__list,
+.sitemap__legal-col {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitemap__nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.sitemap__nav a,
+.sitemap__list a,
+.sitemap__legal a {
+  color: var(--content-black);
+  text-decoration: none;
+  line-height: 1.35;
+  font-weight: 400;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: var(--primary-coral);
+  }
+}
+
+.sitemap__nav a {
+    font-weight: 500;
+}
+
+.sitemap__services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+  align-items: start;
+}
+
+.sitemap__col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sitemap__group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sitemap__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--content-blue);
+}
+
+.sitemap__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sitemap__legal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 30px;
+}
+
+.sitemap__legal-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .sitemap__nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sitemap__services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sitemap__legal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sitemap__nav,
+  .sitemap__services,
+  .sitemap__legal {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+
+  .sitemap__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sitemap__services {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .sitemap__col {
+    gap: 28px;
+  }
+
+  .sitemap__legal {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .sitemap__title {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .sitemap__nav {
+    grid-template-columns: 1fr;
+  }
+}

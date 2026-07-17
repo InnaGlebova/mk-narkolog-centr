@@ -1,59 +1,102 @@
 /* regions */
-.regions__inner-main {
-    display: flex;
-    justify-content: space-between;
-}
 
 .regions__title {
-    text-align: left;
-    max-width: 317px;
-    width: 100%;
-}
-
-.regions__item {
-    padding: 26px;
-    border-right: 1px solid #E2E2E2;
-
-    &:last-child {
-        border: none;
-    }
-
-    & p {
-        font-weight: 700;
-    }
-}
-
-.regions__wrap {
-    display: flex;
-    border-bottom: 1px solid #E2E2E2;
-
-    &:last-child {
-        border: none;
-    }
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .regions__inner {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.regions__inner > * {
+  flex-basis: calc(33.333% - 13.333px);
+}
+
+.regions__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 30px;
+  border: 1px solid #38416133;
+  border-radius: 20px;
+  background-color: var(--content-white);
+  transition: all 0.3s linear;
+
+  &:hover {
+    border-color: var(--primary-coral);
+  }
+}
+
+.regions__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: var(--content-blue);
+
+  img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
+
+.regions__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.regions__label {
+  color: var(--content-grey);
+}
+
+.regions__address {
+  margin: 0;
+  color: var(--content-blue);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 /* regions media */
-@media (max-width: 1000px) {
-    .regions__item {
-        width: 100%;
-    }
+
+@media (max-width: 1024px) {
+  .regions__inner > * {
+    flex-basis: calc(50% - 10px);
+  }
 }
 
-@media (max-width:650px) {
+@media (max-width: 768px) {
+  .regions__inner {
+    gap: 15px;
+  }
+  .regions__inner > * {
+    flex-basis: 100%;
+  }
 
-    .regions__wrap {
-        flex-direction: column;
-        border-bottom: none;
-    }
+  .regions__item {
+    padding: 20px 15px;
+  }
 
-    .regions__item {
-        border-right: none;
-        border-bottom: 1px solid #e2e2e2 !important;
-        padding: 20px 10px;
+  .regions__icon {
+    width: 29px;
+    height: 29px;
+
+    img {
+      width: 18px;
+      height: 18px;
     }
+  }
+
+  .regions__address {
+    font-size: 14px;
+  }
 }

@@ -2,52 +2,89 @@
     <div class="container">
         <ul class="breadcrumbs">
             <li> <a href="#">Главная</a></li>
-            <li>Контакты</li>
+            <li> <a href="#">О нас</a></li>
+            <li>Контактная информация</li>
         </ul>
-        <h1>Контакты</h1>
+        <h1>Контактная информация</h1>
+        <div class="title__bg-descr">
+            <p>Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты
+                или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать
+                наличие самого текста
+                или продемонстрировать типографику в деле.</p>
+        </div>
     </div>
 </div>
 
-<section class="contact">
-    <div class="container">
-        <div class="contact__map">
-            <script type="text/javascript"
-                src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU"></script>
-            <div class="map__item-page">
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab357b9a67d4a3c88012d0878d9377e677c8b8f30829903a24d78d363a96aa302&amp;source=constructor"
-                    width="500" height="400" frameborder="0"></iframe>
-            </div>
+<section class="contact section-offset">
+    <div class="contact__map contact-main__map" id="map__container">
+        <div style="width: 100%; height: 100%;" id="map">
+        </div>
+        <div class="container contact__inner">
             <div class="map__contact">
-                <div class="map__contact-item-wrap">
-                    <div class="map__contact-item">
-                        <span class="map__contact-item-title">Наш телефон:</span>
-                        <a href="tel:+78002004816" class="phone-map__contact">+7 800 200-48-16</a>
-                        <p>(бесплатно, по всей России)</p>
+                <div class="map__contact-info">
+                    <div class="map__contact-row">
+                        <picture class="map__contact-icon" aria-hidden="true">
+                            <source srcset="assets/img/icons/phone.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/phone.png" alt="Телефон">
+                        </picture>
+                        <div class="map__contact-body">
+                            <span class="map__contact-label">Телефоны:</span>
+                            <div class="map__contact-values map__contact-values-phone">
+                                <a href="tel:+78002004816">8 800 200-48-16</a>,
+                                <a href="tel:+73472294665">8 347 229-46-65</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="map__contact-item">
-                        <a href="tel:+73472294665" class="phone-map__contact">+7 347 229-46-65</a>
-                        <p>(Уфа и область)</p>
+                    <div class="map__contact-row">
+                        <picture class="map__contact-icon" aria-hidden="true">
+                            <source srcset="assets/img/icons/point.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/point.png" alt="Адрес">
+                        </picture>
+                        <div class="map__contact-body">
+                            <span class="map__contact-label">Адрес:</span>
+                            <p class="map__contact-value">г. Уфа, ул. Авроры, 5/12</p>
+                        </div>
                     </div>
-                    <div class="map__contact-item">
-                        <a href="tel:+79612682676" class="phone-map__contact">+7 961 268-26-76</a>
-                        <p>(горячая линия дежурного нарколога)</p>
+                    <div class="map__contact-row">
+                        <picture class="map__contact-icon" aria-hidden="true">
+                            <source srcset="assets/img/icons/mail.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/mail.png" alt="Почта">
+                        </picture>
+                        <div class="map__contact-body">
+                            <span class="map__contact-label">Почта:</span>
+                            <a class="map__contact-value"
+                                href="mailto:info@mk-narkolog-centr.ru">info@mk-narkolog-centr.ru</a>
+                        </div>
                     </div>
                 </div>
-                <div class="map__contact-item-wrap">
-                    <div class="map__contact-item">
-                        <span>Наша почта:</span>
-                        <a href="mailto:lazarevskoe@medcover.ru">lazarevskoe@medcover.ru</a>
+
+                <div class="map__contact-social">
+                    <span class="map__contact-social-title">Социальные сети</span>
+                    <span class="map__contact-social-decor"></span>
+                    <div class="map__contact-social-list">
+                        <a class="map__contact-social-item" href="#" aria-label="Max">
+                            <img src="assets/img/social/max.svg" alt="">
+                        </a>
+                        <a class="map__contact-social-item" href="#" aria-label="Telegram">
+                            <img src="assets/img/social/tg.svg" alt="">
+                        </a>
+                        <a class="map__contact-social-item" href="#" aria-label="Одноклассники">
+                            <img src="assets/img/social/ok.svg" alt="">
+                        </a>
+                        <a class="map__contact-social-item" href="#" aria-label="ВКонтакте">
+                            <img src="assets/img/social/vk.svg" alt="">
+                        </a>
                     </div>
                 </div>
-                <div class="map__contact-item-wrap">
-                    <div class="map__contact-item">
-                        <span>Адрес консультационной службы: </span>
-                        <a href="#">Симферополь, ул. Ленина, д.254</a>
-                    </div>
+
+                <div class="map__contact-legal">
+                    <p>Медицинские услуги оказываются ООО «МК «Наркологический центр» по медицинской лицензии
+                        Л041-01170-02/00342140 от 10.12.2018 по адресу: Республика Башкортостан, г.Уфа, ул. Авроры, д.
+                        5/12.</p>
+                    <p>*Медицинские услуги в стационаре оказываются партнерами ООО «Югэкосервис» по адресу:
+                        г.Ростов-на-Дону, ул. Красноармейская, д. 170 по медицинской лицензии Л041-01050-61/00347883 от
+                        28 декабря 2021 г.</p>
                 </div>
-                <button class="standart-btn map__contact-btn popup-btn change__item-btn change__item-btn_current"
-                data-path="popup-change">Работаем круглосуточно</button>
             </div>
         </div>
     </div>
@@ -55,51 +92,64 @@
 
 <section class="regions section-offset">
     <div class="container regions__container">
-        <div class="regions__inner-main">
-            <h2 class="section-title regions__title">Наши <br> филиалы</h2>
-            <div class="regions__inner">
-                <div class="regions__wrap">
-                    <div class="regions__item">
-                        <p>улица Мусоргского, 21</p>
-                    </div>
-                    <div class="regions__item">
-                        <p>Первомайская улица, 84/2</p>
-                    </div>
+        <h2 class="section-title regions__title">Филиалы колл-центров</h2>
+        <div class="regions__inner">
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Мусоргского, 21</p>
                 </div>
-                <div class="regions__wrap">
-                    <div class="regions__item">
-                        <p>улица Мусоргского, 21</p>
-                    </div>
-                    <div class="regions__item">
-                        <p>Первомайская улица, 84/2</p>
-                    </div>
+            </a>
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Первомайская, 84/2</p>
                 </div>
-                <div class="regions__wrap">
-                    <div class="regions__item">
-                        <p>улица Мусоргского, 21</p>
-                    </div>
-                    <div class="regions__item">
-                        <p>Первомайская улица, 84/2</p>
-                    </div>
+            </a>
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Союзная, 6/2</p>
                 </div>
-            </div>
+            </a>
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Геологов, 51/1</p>
+                </div>
+            </a>
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Комсомольская, 156/1</p>
+                </div>
+            </a>
+            <a href="#" class="regions__item">
+                <span class="regions__icon" aria-hidden="true">
+                    <img src="assets/img/icons/point.svg" alt="">
+                </span>
+                <div class="regions__body">
+                    <span class="regions__label">Адрес:</span>
+                    <p class="regions__address">г. Уфа, ул. Севастопольская, 7</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>
 
-<section class="callback section-offset section-offset">
-    <div class="container callback__container">
-        <form class="callback__form">
-            <h2>Свяжитесь <br> c нами сейчас!</h2>
-            <p>Срочный вызов нарколога на дом</p>
-            <label class="callback__form-label form-label">
-                <input type="tel" class="callback__form-input form__input" placeholder="+7 (___)___-__-__" required>
-            </label>
-            <button class="standart-btn callback__form-btn" type="submit">Вызвать специалиста</button>
-        </form>
-        <picture class="callback__picture">
-            <source srcset="assets/img/callback/phone.webp" type="image/webp">
-            <img class="callback__img" src="assets/img/callback/phone.png" loading="lazy" alt="Изображение телефона">
-        </picture>
-    </div>
-</section>
+{{> consultation }}

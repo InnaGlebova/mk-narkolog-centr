@@ -794,24 +794,24 @@ if (hideItems.length > 0) {
     })
 }
 
-const faqSections = document.querySelectorAll('.faq');
+const faqSections = document.querySelectorAll('.faq, .faq-page__content');
 if (faqSections.length > 0) {
-    const FAQ_VISIBLE_STEP = 5;
     const FAQ_BTN_MORE = 'Показать еще';
     const FAQ_BTN_HIDE = 'Скрыть все';
 
     faqSections.forEach((section) => {
         const items = Array.from(section.querySelectorAll('.faq__hide-item'));
         const moreBtn = section.querySelector('.faq__btn--more');
+        const step = Number(section.dataset.faqStep) || (section.classList.contains('faq-page__content') ? 10 : 5);
 
-        if (!moreBtn || items.length <= FAQ_VISIBLE_STEP) {
+        if (!moreBtn || items.length <= step) {
             if (moreBtn) {
                 moreBtn.hidden = true;
             }
             return;
         }
 
-        let visibleCount = FAQ_VISIBLE_STEP;
+        let visibleCount = step;
 
         const collapseHiddenItems = () => {
             items.forEach((item, index) => {
@@ -840,10 +840,10 @@ if (faqSections.length > 0) {
 
         moreBtn.addEventListener('click', () => {
             if (visibleCount >= items.length) {
-                visibleCount = FAQ_VISIBLE_STEP;
+                visibleCount = step;
                 collapseHiddenItems();
             } else {
-                visibleCount = Math.min(visibleCount + FAQ_VISIBLE_STEP, items.length);
+                visibleCount = Math.min(visibleCount + step, items.length);
             }
 
             updateFaqVisibility();
@@ -855,49 +855,53 @@ if (faqSections.length > 0) {
 
 /* end faq */
 
-/* reviews */
-/* end rewiews */
-
 /* yandex map */
-let flagMap = false;
-document.addEventListener('scroll', function () {
-    const blockMap = document.getElementById('map');
-    if (blockMap) {
-        const posTop = blockMap.getBoundingClientRect().top;
-
-        if (posTop < window.innerHeight && !flagMap) {
-            if (!document.querySelector('[src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"]')) {
-                const script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU';
-                document.head.appendChild(script);
-            }
-            ymaps.ready(init);
-            function init() {
-                const map = document.querySelector('#map');
-
-                if (map) {
-                    var myMap = new ymaps.Map("map", {
-                        center: [22, 22, 22],
-                        zoom: 14,
-
-                    });
-
-                    myGeoObject = new ymaps.GeoObject();
-                    myMap.geoObjects.add(new ymaps.Placemark(myMap.getCenter(), {
-                        balloonContent: '[22,22,22],'
-                    }));
-                    myMap.behaviors.disable(['scrollZoom']);
-                }
-            }
-
-            flagMap = true;
-        }
+const map = document.querySelectorAll('#map');
+if (map.length > 0) {
+    function onEntryMap(e) {
+        e.forEach(e => {
+            e.isIntersecting && loadMap() && initMap();
+        })
     }
+    let options = {
+        threshold: [0.5],
+    },
+        observer = new IntersectionObserver(onEntryMap, options)
+    for (let e of map) observer.observe(e)
+}
+function loadMap() {
+    if (!document.querySelector('[src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"]')) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+        script.onload = initMap;
+        document.head.appendChild(script);
+    }
+}
+function initMap() {
+    ymaps.ready(function () {
+        const myMap = new ymaps.Map('map', {
+            center: [47.228163, 39.714641],
+            zoom: 18,
+            controls: []
+        });
+        var myPlacemark = new ymaps.Placemark([47.228163, 39.714641],
+            {
+                balloonContentHeader: "<p class='yandex-city'>Ростов-на-Дону</p>",
+                balloonContentBody: "<p class='yandex-clinic'>Наркологический центр Похмелочная</p>",
+                hintContent: "Посмотреть Адрес"
+            }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/assets/img/icons/map-marker.svg',
+            iconImageSize: [50, 50],
+        });
 
-
-});
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable(['scrollZoom']);
+    });
+}
 /* end yandex map */
+
 /* anchor */
 const anchors = document.querySelectorAll('.scroll-to')
 if (anchors.length > 0) {
@@ -1262,3 +1266,27 @@ if (footer) {
     });
 }
 /* end footer accordion */
+
+/* vacancies accordion */
+const vacancies = document.querySelectorAll('.vacancy');
+if (vacancies.length > 0) {
+    vacancies.forEach((vacancy) => {
+        const moreBtn = vacancy.querySelector('.vacancy__more');
+        const title = vacancy.querySelector('.vacancy__title');
+
+        const openVacancy = () => {
+            vacancies.forEach((item) => item.classList.remove('is-open'));
+            vacancy.classList.add('is-open');
+        };
+
+        if (moreBtn) {
+            moreBtn.addEventListener('click', openVacancy);
+        }
+
+        if (title) {
+            title.style.cursor = 'pointer';
+            title.addEventListener('click', openVacancy);
+        }
+    });
+}
+/* end vacancies accordion */

@@ -6,6 +6,7 @@
     justify-content: center;
     padding-bottom: 17px;
     margin-bottom: 17px;
+    
 }
 
 .tabs__close {
@@ -76,4 +77,8 @@
     .tab {
         padding: 8px 15px;
     }
+
+    .tabs__wrapper {
+        gap: 5px;
+      }
 }
