@@ -172,3 +172,25 @@
         width: 100%;
     }
 }
+
+.reviews-page__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reviews-page__inner>* {
+    flex-basis: calc(33.3333% - 13.3333px);
+}
+
+@media (max-width: 1024px) {
+    .reviews-page__inner>* {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-page__inner>* {
+        flex-basis: 100%;
+    }
+}

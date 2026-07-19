@@ -2,13 +2,22 @@
   <div class="container">
     <ul class="breadcrumbs">
       <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
       <li>Наши акции</li>
     </ul>
     <h1>Наши акции</h1>
+    <div class="title__bg-descr">
+      <p>
+        Рыбатекст используется дизайнерами, проектировщиками и фронтендерами,
+        когда нужно быстро заполнить макеты или прототипы содержимым. Это
+        тестовый контент, который не должен нести никакого смысла, лишь показать
+        наличие самого текста или продемонстрировать типографику в деле.
+      </p>
+    </div>
   </div>
 </div>
 
-<section class="stock-page">
+<section class="stock-page section-offset">
   <div class="container stock-page__container">
     <div class="stock-page__inner">
       <a
@@ -28,7 +37,8 @@
         <div class="stock__item-body">
           <p class="stock__item-name change-item__title">Скидка 1000 ₽</p>
           <p class="stock__item-descr">
-            на вывод из запоя на дому при заказе с сайта
+            на вывод из запоя на дому при заказе с сайта на вывод из запоя на
+            дому при заказе с сайта
           </p>
           <p class="stock__item-price">
             <span class="stock__item-price-old">2 700 ₽</span>
@@ -166,40 +176,4 @@
   </div>
 </section>
 
-<section class="consultation section-padding">
-  <div class="container consultation__container">
-    <div class="consultation__inner">
-      <form class="consultation__form form">
-        <h2 class="consultation__title">Бесплатная консультация</h2>
-        <p class="consultation__descr">Оставьте данные и мы вам перезвоним!</p>
-        <label class="consultation__form-label">
-          <input
-            type="tel"
-            class="consultation__form-input"
-            placeholder="+7 (___) ___-__-__"
-            required
-          />
-        </label>
-        <p class="consultation__policy">
-          Нажимая кнопку я соглашаюсь с
-          <a href="#">политикой конфиденциальности</a> и
-          <a href="#">пользовательским соглашением</a>
-        </p>
-        <button
-          class="standart-btn primary-btn consultation__form-btn popup-btn"
-          data-path="popup-change"
-        >
-          Вызвать специалиста
-        </button>
-      </form>
-      <picture class="consultation__picture">
-        <img
-          class="consultation__img"
-          src="assets/img/consultation/consultation.png"
-          loading="lazy"
-          alt="Врач наркологического центра"
-        />
-      </picture>
-    </div>
-  </div>
-</section>
+{{> consultation }}

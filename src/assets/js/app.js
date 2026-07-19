@@ -1267,6 +1267,32 @@ if (footer) {
 }
 /* end footer accordion */
 
+/* price-page accordion */
+const pricePage = document.querySelector('.price-page');
+if (pricePage) {
+    const priceSections = pricePage.querySelectorAll('.price-page__inner');
+
+    priceSections.forEach((section) => {
+        const title = section.querySelector('.price-page__title');
+        if (!title) return;
+
+        title.addEventListener('click', () => {
+            if (window.innerWidth > 768) return;
+
+            const isOpen = section.classList.contains('is-open');
+
+            priceSections.forEach((item) => {
+                item.classList.remove('is-open');
+            });
+
+            if (!isOpen) {
+                section.classList.add('is-open');
+            }
+        });
+    });
+}
+/* end price-page accordion */
+
 /* vacancies accordion */
 const vacancies = document.querySelectorAll('.vacancy');
 if (vacancies.length > 0) {
