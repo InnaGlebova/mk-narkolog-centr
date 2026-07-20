@@ -120,17 +120,24 @@
     }
 
     &>blockquote {
-        background: rgba(232, 236, 245, 0.40);
-        padding: 20px;
+        background: #38416108;
+        padding: 40px;
         color: var(--content-black);
-        font-size: 18px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.33;
-
-        &>span {
-            color: var(--content-grey);
-            font-size: 18px;
-            font-weight: 700;
+        border-radius: 20px;
+        position: relative;
+        padding-left: 140px;
+        margin: 45px 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 60px;
+            height: 50px;
+            background: url("../../assets/img/icons/quote.svg") no-repeat center center;
+            background-size: 100% 100%;
         }
     }
 }

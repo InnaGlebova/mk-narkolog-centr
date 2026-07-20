@@ -1,9 +1,5 @@
 /* articles */
 
-.articles__container {
-    padding: 0 15px;
-}
-
 .articles__title {
     text-align: left;
     margin: 0 0 40px;
@@ -13,10 +9,6 @@
     margin-bottom: 32px;
 }
 
-.articles__swiper {
-    padding: 0;
-    overflow: hidden;
-}
 
 .articles__item {
     display: flex;
@@ -24,11 +16,11 @@
     height: auto;
     overflow: hidden;
     border-radius: 20px;
-    background-color: #F6F4F3;
+    background-color: #38416108;
     text-decoration: none;
     color: inherit;
     transition: border-color 0.3s ease;
-    border: 1px solid transparent;
+    border: 1px solid #38416133;
 
     &:hover {
         border-color: var(--primary-coral);
@@ -274,15 +266,6 @@
 @media (max-width: 450px) {
     .articles__controls {
         justify-content: center;
-    }
-
-    .articles__swiper-btns {
-        display: none;
-    }
-
-    .articles__pagination {
-        justify-content: center;
-        width: 100%;
     }
 
     .articles__item-img {

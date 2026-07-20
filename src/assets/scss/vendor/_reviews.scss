@@ -24,11 +24,6 @@
     margin-bottom: 32px;
 }
 
-.reviews__swiper {
-    padding: 0;
-    overflow: hidden;
-}
-
 .reviews__item {
     display: flex;
     flex-direction: column;
@@ -137,10 +132,6 @@
     line-height: 1.4;
 }
 
-.reviews__container {
-    padding: 0 15px;
-}
-
 /* reviews media */
 
 @media (max-width: 1000px) {
@@ -161,15 +152,6 @@
 
     .reviews__controls {
         justify-content: center;
-    }
-
-    .reviews__swiper-btns {
-        display: none;
-    }
-
-    .reviews__pagination {
-        justify-content: center;
-        width: 100%;
     }
 }
 

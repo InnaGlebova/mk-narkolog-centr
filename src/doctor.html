@@ -1,143 +1,300 @@
-<section class="intro2 intro2-doctor">
+<div class="doctor-page section-offset">
     <div class="container">
-        <ul class="breadcrumbs">
-            <li> <a href="#">Главная</a></li>
-            <li> <a href="#">Наши акции</a></li>
-            <li>Шешенина Наталья Анатольевна</li>
+        <ul class="breadcrumbs doctor-page__breadcrumbs">
+            <li><a href="/">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Наши специалисты</a></li>
+            <li>Каримов Равиль Рамилович</li>
         </ul>
-        <div class="doc-intro__inner">
-            <picture class="doc-intro__picture">
-                <source srcset="assets/img/doctors/4.webp" type="image/webp">
-                <img class="doc-intro__img" src="assets/img/doctors/4.png" loading="lazy" alt="">
-            </picture>
-            <div class="doc-intro__info">
-                <h1>Шешенина Наталья Анатольевна</h1>
-                <div class="doc-intro__info-wrap">
-                    <div class="doc-intro__info-item doc-intro__pos">
-                        <p>Должность:</p>
-                        <span>Нарколог, Психиатр, Психотерапевт</span>
-                    </div>
-                    <div class="doc-intro__info-item doc-intro__stages">
-                        <p>Стаж: </p>
-                        <span>21 год</span>
-                    </div>
-                </div>
-                <div class="doc-intro__info-link">
-                    <div class="doc-intro__social-wrap">
-                        <a class="doc-intro__social-item" href="#">
-                            <picture class="doc-intro__social-picture">
-                                <source srcset="assets/img/social/tg.svg" type="image/svg+xml">
-                                <img src="assets/img/social/tg.png" alt="" loading="lazy">
-                            </picture>
-                        </a>
-                        <a class="doc-intro__social-item" href="#">
-                            <picture class="doc-intro__social-picture">
-                                <source srcset="assets/img/social/vk.svg" type="image/svg+xml">
-                                <img src="assets/img/social/vk.png" alt="" loading="lazy">
-                            </picture>
-                        </a>
-                        <a class="doc-intro__social-item" href="#">
-                            <picture class="doc-intro__social-picture">
-                                <source srcset="assets/img/social/ok.svg" type="image/svg+xml">
-                                <img src="assets/img/social/ok.png" alt="" loading="lazy">
-                            </picture>
-                        </a>
-                    </div>
-                    <a class="doc-intro__prodoc" href="#">
-                        <picture class="doc-intro__prodoc-picture">
-                            <source srcset="assets/img/icons/prodoc.svg" type="image/svg+xml">
-                            <img src="assets/img/icons/prodoc.png" alt="" loading="lazy">
-                        </picture>
-                    </a>
 
+        <div class="doctor-page__layout change-item">
+            <aside class="doctor-page__sidebar">
+                <div class="doctor-page__photo">
+                    <picture class="doctor-page__picture">
+                        <source srcset="assets/img/doctors/1.webp" type="image/webp" />
+                        <img src="assets/img/doctors/1.png" alt="Каримов Равиль Рамилович" loading="eager" />
+                    </picture>
                 </div>
+
+                <div class="doctor-page__sidebar-info">
+                    <div class="doctor-page__schedule">
+                        <h2 class="doctor-page__schedule-title">График работы врача</h2>
+                        <ul class="doctor-page__schedule-list">
+                            <li>
+                                <span>Понедельник</span>
+                                <span>08:00–16:00</span>
+                            </li>
+                            <li>
+                                <span>Вторник</span>
+                                <span>08:00–16:00</span>
+                            </li>
+                            <li>
+                                <span>Среда</span>
+                                <span>08:00–16:00</span>
+                            </li>
+                            <li>
+                                <span>Четверг</span>
+                                <span>Выходной</span>
+                            </li>
+                            <li>
+                                <span>Пятница</span>
+                                <span>Выходной</span>
+                            </li>
+                            <li>
+                                <span>Суббота</span>
+                                <span>08:00–16:00</span>
+                            </li>
+                            <li>
+                                <span>Воскресенье</span>
+                                <span>08:00–16:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="doctor-page__price">
+                        Стоимость консультации: <b>2000 руб.</b>
+                    </div>
+
+                    <div class="doctor-page__links">
+                        <a class="doctor-page__link" href="#" aria-label="ВКонтакте">
+                            <img src="assets/img/social/vk.svg" alt="" />
+                        </a>
+                        <a class="doctor-page__link--prodoc" href="#" aria-label="Продокторов">
+                            <img src="assets/img/icons/prodoc.svg" alt="Продокторов" />
+                        </a>
+                    </div>
+
+                    <button class="standart-btn primary-btn doctor-page__btn popup-btn change-item__btn doctors__btn-js"
+                        type="button" data-path="popup-change">
+                        Записаться к врачу
+                    </button>
+                </div>
+            </aside>
+
+            <div class="doctor-page__main">
+                <div class="doctor-page__head">
+                    <h1 class="doctor-page__name change-item__title"><span>Каримов</span><br> Равиль Рамилович</h1>
+                    <div class="doctor-page__rating">
+                        <span class="doctor-page__stars" aria-hidden="true">
+                            <img src="assets/img/rating/star.svg" alt="" />
+                            <img src="assets/img/rating/star.svg" alt="" />
+                            <img src="assets/img/rating/star.svg" alt="" />
+                            <img src="assets/img/rating/star.svg" alt="" />
+                            <img class="doctor-page__star--empty" src="assets/img/rating/star.svg" alt="" />
+                        </span>
+                        <span class="doctor-page__rating-text">4.6 (130 отзывов)</span>
+                    </div>
+                </div>
+
+                <div class="doctor-page__info">
+                    <div class="doctor-page__info-item">
+                        <span class="doctor-page__info-label">Должность</span>
+                        <span class="doctor-page__info-value">Главный врач, терапевт</span>
+                    </div>
+                    <div class="doctor-page__info-item">
+                        <span class="doctor-page__info-label">Категория</span>
+                        <span class="doctor-page__info-value">Высшая</span>
+                    </div>
+                    <div class="doctor-page__info-item">
+                        <span class="doctor-page__info-label">Стаж</span>
+                        <span class="doctor-page__info-value">15 лет</span>
+                    </div>
+                    <div class="doctor-page__info-item">
+                        <span class="doctor-page__info-label">ВУЗ</span>
+                        <span class="doctor-page__info-value">Первый МГМУ им. И.М. Сеченова</span>
+                    </div>
+                </div>
+
+                <section class="doctor-page__block is-open">
+                    <h2 class="doctor-page__block-title">Образование</h2>
+                    <div class="doctor-page__block-body">
+                    <ul class="doctor-page__list">
+                        <li>
+                            <b>Базовое образование:</b>
+                            2008, Первый Московский государственный медицинский университет имени И.М. Сеченова
+                            (лечебное дело)
+                        </li>
+                        <li>
+                            <b>Профессиональная переподготовка:</b>
+                            2010, Первый Московский государственный медицинский университет имени И.М. Сеченова
+                            (терапия)
+                        </li>
+                        <li>
+                            <b>Повышение квалификации:</b>
+                            2015, Первый Московский государственный медицинский университет имени И.М. Сеченова
+                            (организация здравоохранения)
+                        </li>
+                        <li>Курсы повышения медицинской квалификации в Уфе.</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <section class="doctor-page__block">
+                    <h2 class="doctor-page__block-title">Опыт и квалификация</h2>
+                    <div class="doctor-page__block-body">
+                    <div class="doctor-page__text">
+                        <p>
+                            Врач высшей категории с многолетним практическим опытом работы в сфере терапии и организации
+                            здравоохранения. Специализируется на комплексной диагностике, ведении пациентов с
+                            хроническими
+                            заболеваниями и разработке индивидуальных программ лечения.
+                        </p>
+                        <p>
+                            Имеет опыт руководства медицинским коллективом, внедрения современных протоколов оказания
+                            помощи и контроля качества медицинских услуг. Регулярно проходит повышение квалификации и
+                            участвует в профессиональных конференциях.
+                        </p>
+                        <p>
+                            В работе придерживается принципов доказательной медицины, внимательного отношения к пациенту
+                            и прозрачного объяснения назначений. Нацелен на устойчивый результат лечения и профилактику
+                            осложнений.
+                        </p>
+                    </div>
+                    </div>
+                </section>
+
+                <section class="doctor-page__block">
+                    <h2 class="doctor-page__block-title">Направления деятельности</h2>
+                    <div class="doctor-page__block-body">
+                    <div class="doctor-page__directions" data-collapsed="true">
+                        <div class="doctor-page__directions-inner">
+                            <p>
+                                В своей практике врач сочетает клиническую работу с организационными задачами клиники,
+                                уделяя особое внимание качеству помощи и сопровождению пациента на всех этапах лечения.
+                            </p>
+                            <p><b>Основное направление деятельности:</b></p>
+                            <ul class="doctor-page__list">
+                                <li>
+                                    Управление лечебным процессом, координация работы специалистов и контроль соблюдения
+                                    медицинских стандартов.
+                                </li>
+                                <li>
+                                    Профилактика обострений, разработка индивидуальных рекомендаций и динамическое
+                                    наблюдение за состоянием пациентов.
+                                </li>
+                                <li>
+                                    Консультативный прием по вопросам терапии и сопутствующих состояний, связанных с
+                                    зависимостями.
+                                </li>
+                                <li>
+                                    Организация маршрутизации пациента внутри клиники и взаимодействие с выездными
+                                    бригадами.
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="doctor-page__more" type="button">Читать полностью...</button>
+                    </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="doc-info">
-    <div class="container doc-info__container">
-        <div class="doc-info__inner">
-            <div class="doc-info__education text__content">
-                <h2>Образование:</h2>
-                <ol>
-                    <li><b>Врач высшей категории. </b>Интернатура - Казанский государственный медицинский университет
-                        (психиатр нарколог)</li>
-                    <li><b>Повышение квалификации: </b>Интернатура по психиатрии.</li>
-                    <li><b>Врач высшей категории. </b>Интернатура - Казанский государственный медицинский университет
-                        (психиатр нарколог)</li>
-                    <li><b>Повышение квалификации: </b>Интернатура по психиатрии.</li>
-                </ol>
+        <section class="doctor-page__section">
+            <h2 class="doctor-page__section-title">Методы лечения и подходы</h2>
+            <div class="doctor-page__block-body">
+            <div class="doctor-page__text">
+                <p>
+                    В своей работе врач ориентируется на современные международные стандарты оказания медицинской помощи
+                    и индивидуальный подход к каждому пациенту. Лечение подбирается с учетом состояния, сопутствующих
+                    заболеваний и целей терапии.
+                </p>
             </div>
-            <div class="doc-info__schedule">
-                <h2>Часы приема</h2>
-                <div class="doc-info__schedule-item">
-                    <p>Пн-Пт:</p>
-                    <span>09:00-18:00</span>
-                </div>
-                <div class="doc-info__schedule-item">
-                    <p>Сб-Вс:</p>
-                    <span>выходные</span>
-                </div>
-                <div class="doc-info__schedule-item doc-info__schedule-item-price">
-                    <p>Стоимость консультации: </p>
-                    <span>от 6 000 руб.</span>
-                </div>
-                <button class="standart-btn">Записаться на прием</button>
+            <ul class="doctor-page__list">
+                <li>Современные лабораторные исследования и инструментальные методы диагностики</li>
+                <li>Применение проверенных эффективных лекарственных препаратов и методик немедикаментозного лечения
+                </li>
+                <li>Комплексный подход к ведению пациентов с сочетанными заболеваниями</li>
+                <li>
+                    Использование технологий телемедицины и дистанционных консультаций для расширения доступности
+                    медицинской помощи
+                </li>
+            </ul>
+            <div class="doctor-page__text">
+                <p>
+                    При необходимости врач привлекает смежных специалистов клиники, чтобы обеспечить максимально
+                    эффективный и безопасный результат лечения.
+                </p>
             </div>
-        </div>
+            </div>
+        </section>
+
+        <section class="doctor-page__section doctor-page__section--last">
+            <h2 class="doctor-page__section-title">Особенности подхода</h2>
+            <div class="doctor-page__block-body">
+            <div class="doctor-page__text">
+                <p>
+                    В центре внимания — потребности пациента, этические стандарты и прозрачность всех этапов помощи.
+                    Врач сочетает клиническую практику с навыками организации здравоохранения, что помогает выстраивать
+                    понятный и последовательный маршрут лечения.
+                </p>
+                <p>
+                    Такой подход гарантирует внимательное отношение, контроль динамики состояния и работу на улучшение
+                    качества жизни пациента.
+                </p>
+            </div>
+            </div>
+        </section>
     </div>
-</section>
+</div>
 
 <section class="licences section-offset">
-    <div class="container licences__container">
-        <div class="licences__head">
-            <div class="licences__head-info">
-                <h2 class="licences__title section-title">Дипломы и сертификаты об образовании</h2>
-            </div>
-        </div>
+    <div class="container licences__container swiper__container">
+        <h2 class="licences__title section-title doctor-page__swiper-title swiper__title">Дипломы и сертификаты врача</h2>
 
         <div class="licences__inner custom-wrapper__swiper">
             <div class="swiper licences__swiper">
                 <div class="swiper-wrapper licences__swiper-wrapper">
                     <div class="swiper-slide licences__swiper-slide">
-                        <a class="licences__item photo-zoom" data-fancybox="diplomas" href="assets/img/licences/1.jpg">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/1.jpg">
                             <picture class="licences__picture">
-                                <source srcset="assets/img/licences/1.webp" type="image/webp">
-                                <img src="assets/img/licences/1.jpg" loading="lazy" alt="Диплом">
+                                <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                                <img src="assets/img/licences/1.jpg" loading="lazy" alt="Диплом врача" />
                             </picture>
                         </a>
                     </div>
                     <div class="swiper-slide licences__swiper-slide">
-                        <a class="licences__item photo-zoom" data-fancybox="diplomas" href="assets/img/licences/2.jpg">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/2.jpg">
                             <picture class="licences__picture">
-                                <source srcset="assets/img/licences/2.webp" type="image/webp">
-                                <img src="assets/img/licences/2.jpg" loading="lazy" alt="Диплом">
+                                <source srcset="assets/img/licences/2.webp" type="image/webp" />
+                                <img src="assets/img/licences/2.jpg" loading="lazy" alt="Сертификат врача" />
                             </picture>
                         </a>
                     </div>
                     <div class="swiper-slide licences__swiper-slide">
-                        <a class="licences__item photo-zoom" data-fancybox="diplomas" href="assets/img/licences/3.jpg">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/3.jpg">
                             <picture class="licences__picture">
-                                <source srcset="assets/img/licences/3.webp" type="image/webp">
-                                <img src="assets/img/licences/3.jpg" loading="lazy" alt="Диплом">
+                                <source srcset="assets/img/licences/3.webp" type="image/webp" />
+                                <img src="assets/img/licences/3.jpg" loading="lazy" alt="Сертификат врача" />
                             </picture>
                         </a>
                     </div>
                     <div class="swiper-slide licences__swiper-slide">
-                        <a class="licences__item photo-zoom" data-fancybox="diplomas" href="assets/img/licences/1.jpg">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/1.jpg">
                             <picture class="licences__picture">
-                                <source srcset="assets/img/licences/1.webp" type="image/webp">
-                                <img src="assets/img/licences/1.jpg" loading="lazy" alt="Диплом">
+                                <source srcset="assets/img/licences/1.webp" type="image/webp" />
+                                <img src="assets/img/licences/1.jpg" loading="lazy" alt="Диплом врача" />
                             </picture>
                         </a>
                     </div>
                     <div class="swiper-slide licences__swiper-slide">
-                        <a class="licences__item photo-zoom" data-fancybox="diplomas" href="assets/img/licences/2.jpg">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/2.jpg">
                             <picture class="licences__picture">
-                                <source srcset="assets/img/licences/2.webp" type="image/webp">
-                                <img src="assets/img/licences/2.jpg" loading="lazy" alt="Диплом">
+                                <source srcset="assets/img/licences/2.webp" type="image/webp" />
+                                <img src="assets/img/licences/2.jpg" loading="lazy" alt="Сертификат врача" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide licences__swiper-slide">
+                        <a class="licences__item photo-zoom" data-fancybox="doctor-licences"
+                            href="assets/img/licences/3.jpg">
+                            <picture class="licences__picture">
+                                <source srcset="assets/img/licences/3.webp" type="image/webp" />
+                                <img src="assets/img/licences/3.jpg" loading="lazy" alt="Сертификат врача" />
                             </picture>
                         </a>
                     </div>
@@ -145,87 +302,321 @@
             </div>
         </div>
 
-        <div class="licences__controls">
+        <div class="licences__controls swiper__controls">
             <div class="swiper-btns licences__swiper-btns">
                 <div class="slider-button slider-button__prev licences-button__prev licences__button"></div>
                 <div class="slider-button slider-button__next licences-button__next licences__button"></div>
             </div>
+            <span class="swiper__controls-decor"></span>
             <div class="swiper__pagination licences__pagination"></div>
         </div>
     </div>
 </section>
 
 <section class="reviews section-offset">
-    <div class="container reviews__container">
-        <div class="reviews__top-wrap">
-            <h2 class="reviews__title section-title">Отзывы пациентов о враче</h2>
-            <div class="swiper-btns reviews__swiper-btns">
-                <div class="slider-button slider-button__prev reviews-button__prev reviews__button"></div>
-                <div class="slider-button slider-button__next reviews-button__next reviews__button"></div>
-            </div>
-        </div>
-        <div class="custom-wrapper__swiper">
+    <div class="container reviews__container swiper__container">
+        <h2 class="reviews__title section-title doctor-page__swiper-title swiper__title">Отзывы пациентов о враче</h2>
+
+        <div class="custom-wrapper__swiper reviews__inner">
             <div class="swiper reviews__swiper">
                 <div class="swiper-wrapper reviews__swiper-wrapper">
-                    <div class="swiper-slide reviews__item change__item-title">
-                        <div class="reviews__top">
-                            <p class="reviews__top-name">Сергей Д.</p>
-                            <span class="reviews__top-age">48 лет</span>
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__card-top">
+                            <div class="reviews__raiting" aria-label="Оценка 4 из 5">
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star reviews__star--empty" src="assets/img/rating/star.svg"
+                                    alt="" />
+                            </div>
+                            <img class="reviews__platform" src="assets/img/rating/yandex.svg" loading="lazy"
+                                alt="Яндекс" />
+                        </div>
+                        <div class="reviews__author">
+                            <p class="reviews__name">Дегтярев Сергей Иванович</p>
+                            <p class="reviews__info">г. Уфа, 48 лет</p>
                         </div>
                         <div class="reviews__text">
                             <p>
                                 Огромное спасибо за оказание помощи на дому. После «застолья» в клинику ехать неловко.
-                                Вызов
-                                врача на дом сильно выручает. На следующий день все в порядке, и можно идти на работу.
+                                Вызов врача на дом сильно выручает. На следующий день все в порядке, и можно идти на
+                                работу.
                                 Качество услуг и оперативность всегда на высоте.
                             </p>
+                            <button class="reviews__btn popup-btn" type="button" data-path="popup-reviews">
+                                Читать полностью...
+                            </button>
                         </div>
-                        <button class="reviews__btn popup-btn" data-path="popup-reviews">
-                            Читать полностью
-                        </button>
+                        <time class="reviews__date" datetime="2023-05-15">2023-05-15</time>
                     </div>
-                    <div class="swiper-slide reviews__item change__item-title">
-                        <div class="reviews__top">
-                            <p class="reviews__top-name">Сергей Д.</p>
-                            <span class="reviews__top-age">48 лет</span>
+
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__card-top">
+                            <div class="reviews__raiting" aria-label="Оценка 5 из 5">
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                            </div>
+                            <img class="reviews__platform" src="assets/img/rating/google.svg" loading="lazy"
+                                alt="Google" />
+                        </div>
+                        <div class="reviews__author">
+                            <p class="reviews__name">Иванова Мария Петровна</p>
+                            <p class="reviews__info">г. Уфа, 36 лет</p>
                         </div>
                         <div class="reviews__text">
                             <p>
-                                Огромное спасибо за оказание помощи на дому. После «застолья» в клинику ехать неловко.
-                                Вызов
-                                врача на дом сильно выручает. На следующий день все в порядке, и можно идти на работу.
-                                Качество услуг и оперативность всегда на высоте.
-                                Огромное спасибо за оказание помощи на дому. После «застолья» в клинику ехать неловко.
-                                Вызов
-                                врача на дом сильно выручает. На следующий день все в порядке, и можно идти на работу.
-                                Качество услуг и оперативность всегда на высоте.
+                                Обратились к врачу за консультацией для родственника. Всё объяснили спокойно и по делу,
+                                составили понятный план лечения. Чувствуется опыт и внимательное отношение к пациенту.
                             </p>
+                            <button class="reviews__btn popup-btn" type="button" data-path="popup-reviews">
+                                Читать полностью...
+                            </button>
                         </div>
-                        <button class="reviews__btn popup-btn" data-path="popup-reviews">
-                            Читать полностью
-                        </button>
+                        <time class="reviews__date" datetime="2023-06-02">2023-06-02</time>
                     </div>
-                    <div class="swiper-slide reviews__item change__item-title">
-                        <div class="reviews__top">
-                            <p class="reviews__top-name">Сергей Д.</p>
-                            <span class="reviews__top-age">48 лет</span>
+
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__card-top">
+                            <div class="reviews__raiting" aria-label="Оценка 4 из 5">
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star reviews__star--empty" src="assets/img/rating/star.svg"
+                                    alt="" />
+                            </div>
+                            <img class="reviews__platform" src="assets/img/rating/2gis.svg" loading="lazy" alt="2GIS" />
+                        </div>
+                        <div class="reviews__author">
+                            <p class="reviews__name">Петров Алексей Николаевич</p>
+                            <p class="reviews__info">г. Уфа, 52 года</p>
                         </div>
                         <div class="reviews__text">
                             <p>
-                                Огромное спасибо за оказание помощи на дому. После «застолья» в клинику ехать неловко.
-                                Вызов
-                                врача на дом сильно выручает. На следующий день все в порядке, и можно идти на работу.
-                                Качество услуг и оперативность всегда на высоте.
+                                Спасибо за быстрый выезд и внимательное отношение. Помогли в сложной ситуации, всё
+                                организовали четко и без лишней суеты. Рекомендую врача.
                             </p>
+                            <button class="reviews__btn popup-btn" type="button" data-path="popup-reviews">
+                                Читать полностью...
+                            </button>
                         </div>
-                        <button class="reviews__btn popup-btn" data-path="popup-reviews">
-                            Читать полностью
-                        </button>
+                        <time class="reviews__date" datetime="2023-07-18">2023-07-18</time>
+                    </div>
+
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__card-top">
+                            <div class="reviews__raiting" aria-label="Оценка 5 из 5">
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                                <img class="reviews__star" src="assets/img/rating/star.svg" alt="" />
+                            </div>
+                            <img class="reviews__platform" src="assets/img/rating/yandex.svg" loading="lazy"
+                                alt="Яндекс" />
+                        </div>
+                        <div class="reviews__author">
+                            <p class="reviews__name">Сидорова Елена Викторовна</p>
+                            <p class="reviews__info">г. Уфа, 41 год</p>
+                        </div>
+                        <div class="reviews__text">
+                            <p>
+                                Очень благодарны за профессионализм и поддержку. Врач подробно ответил на все вопросы и
+                                помог выбрать подходящий формат помощи.
+                            </p>
+                            <button class="reviews__btn popup-btn" type="button" data-path="popup-reviews">
+                                Читать полностью...
+                            </button>
+                        </div>
+                        <time class="reviews__date" datetime="2023-08-10">2023-08-10</time>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="swiper__pagination reviews__pagination">
+
+        <div class="reviews__controls swiper__controls">
+            <div class="swiper-btns reviews__swiper-btns">
+                <div class="slider-button slider-button__prev reviews-button__prev reviews__button"></div>
+                <div class="slider-button slider-button__next reviews-button__next reviews__button"></div>
+            </div>
+            <span class="swiper__controls-decor"></span>
+            <div class="swiper__pagination reviews__pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="doctor-services section-offset">
+    <div class="container">
+        <h2 class="doctor-services__title section-title">Оказываемые услуги</h2>
+        <div class="doctor-services__wrap" data-collapsed="true">
+            <ul class="doctor-services__list">
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+                <li><a href="#">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами</a></li>
+            </ul>
+            <button class="doctor-services__more" type="button">Читать полностью...</button>
+        </div>
+    </div>
+</section>
+
+<section class="articles section-offset">
+    <div class="container articles__container swiper__container">
+        <h2 class="articles__title section-title swiper__title">Публикации врача</h2>
+
+        <div class="custom-wrapper__swiper articles__inner">
+            <div class="swiper articles__swiper">
+                <div class="swiper-wrapper articles__swiper-wrapper">
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/1.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/1.png" loading="lazy"
+                                alt="Особенности алкоголизма в России - основная статистика" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Особенности алкоголизма в России - основная статистика
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/2.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/2.png" loading="lazy"
+                                alt="Через сколько можно алкоголь после удаления зуба" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Через сколько можно алкоголь после удаления зуба
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/3.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/3.png" loading="lazy"
+                                alt="Почему с похмелья трясет и как это остановить?" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Почему с похмелья трясет и как это остановить?
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/1.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/1.png" loading="lazy"
+                                alt="Особенности алкоголизма в России - основная статистика" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Особенности алкоголизма в России - основная статистика
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/2.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/2.png" loading="lazy"
+                                alt="Через сколько можно алкоголь после удаления зуба" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Через сколько можно алкоголь после удаления зуба
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="swiper-slide articles__item change__item-title">
+                        <picture class="articles__item-picture">
+                            <source srcset="assets/img/stock/3.webp" type="image/webp" />
+                            <img class="articles__item-img" src="assets/img/stock/3.png" loading="lazy"
+                                alt="Почему с похмелья трясет и как это остановить?" />
+                        </picture>
+                        <div class="articles__item-body">
+                            <time class="articles__item-date" datetime="2026-05-25">2026-05-25</time>
+                            <p class="articles__item-name">
+                                Почему с похмелья трясет и как это остановить?
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles__controls swiper__controls">
+            <div class="swiper-btns articles__swiper-btns">
+                <div class="slider-button slider-button__prev articles-button__prev articles__button"></div>
+                <div class="slider-button slider-button__next articles-button__next articles__button"></div>
+            </div>
+            <span class="swiper__controls-decor"></span>
+            <div class="swiper__pagination articles__pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="installment section-offset">
+    <div class="container installment__container">
+        <div class="installment__inner">
+            <div class="installment__content">
+                <h2 class="installment__title">
+                    Поможем прямо сейчас в любой ситуации!
+                </h2>
+                <p class="installment__descr">Рассрочка 0% на все медицинские услуги</p>
+                <div class="installment__bottom">
+                    <ul class="installment__cards">
+                        <li class="installment__card">
+                            <div class="installment__card-value">0 <span>%</span></div>
+                            <span class="installment__card-label">Рассрочка</span>
+                        </li>
+                        <li class="installment__card">
+                            <div class="installment__card-value">0 <span>₽</span></div>
+                            <span class="installment__card-label">Первый платеж</span>
+                        </li>
+                        <li class="installment__card">
+                            <div class="installment__card-value">3-6-12</div>
+                            <span class="installment__card-label">Месяцев</span>
+                        </li>
+                    </ul>
+                    <button class="standart-btn primary-btn installment__btn popup-btn" data-path="popup-change"
+                        type="button">
+                        Узнать условия
+                    </button>
+                </div>
+            </div>
+            <picture class="installment__picture">
+                <img class="installment__img" src="assets/img/installment/woman.png" loading="lazy"
+                    alt="Врач наркологического центра" />
+            </picture>
         </div>
     </div>
 </section>

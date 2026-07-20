@@ -24,6 +24,18 @@
     }
 }
 
+
+.intro__cta {
+    background-color: var(--primary-coral);
+    color: var(--content-white);
+}
+
+.intro__cta:hover {
+    background-color: var(--content-white);
+    border-color: var(--content-white);
+    color: var(--primary-coral);
+}
+
 .intro__inner {
     position: relative;
     display: flex;
@@ -231,9 +243,9 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .intro__inner {
-        padding: 24px 16px 0;
+        padding: 0;
         border-radius: 20px;
     }
 

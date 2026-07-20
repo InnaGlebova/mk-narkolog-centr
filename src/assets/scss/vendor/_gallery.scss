@@ -1,10 +1,17 @@
 /* gallery */
-
+.gallery__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
 .gallery__item {
     display: block;
     border-radius: 20px;
     overflow: hidden;
 }
+
 
 .gallery__picture {
     display: block;

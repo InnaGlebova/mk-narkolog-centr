@@ -1134,34 +1134,46 @@ if (animationItems.length > 0) {
 const articleNavigation = document.querySelector('.navigation-article');
 
 if (articleNavigation) {
-    const jsScrollBlockList = document.querySelectorAll('.text__item h2, .text__item h3, .text__item h4, .text__item h5, .text__item h6');
+    const jsScrollBlockList = document.querySelectorAll('.text__content h2, .text__content h3, .text__content h4, .text__content h5, .text__content h6');
+    const articleNavigationContent = articleNavigation.querySelector('.navigation-article__content');
+    const articleNavigationList = articleNavigation.querySelector('.navigation-article__list');
+    const articleNavigationMore = articleNavigation.querySelector('.navigation-article__more');
 
-    if (jsScrollBlockList.length > 0) {
+    if (jsScrollBlockList.length > 0 && articleNavigationList) {
         for (let i = 0; i < jsScrollBlockList.length; i += 1) {
             const jsScrollBlock = jsScrollBlockList[i];
             const titleBlock = jsScrollBlock.textContent;
-            const articleNavigationList = document.querySelector('.navigation-article__list');
             const articleNavigationItem = document.createElement('li');
             const articleNavigationLink = document.createElement('a');
             articleNavigationItem.classList.add('navigation-article__item');
             articleNavigationLink.classList.add('navigation-article__link');
-            jsScrollBlock.setAttribute('id', `${i}`)
+            jsScrollBlock.setAttribute('id', `${i}`);
             articleNavigationLink.setAttribute('href', `#${i}`);
-            articleNavigationLink.textContent = ' ' + titleBlock;
+            articleNavigationLink.textContent = titleBlock.trim();
             articleNavigationItem.append(articleNavigationLink);
             articleNavigationList.append(articleNavigationItem);
         }
 
-        document.querySelectorAll('a[href^="#"').forEach(link => {
+        if (articleNavigationContent && jsScrollBlockList.length > 4) {
+            articleNavigationContent.setAttribute('data-collapsed', 'true');
+        }
 
+        if (articleNavigationMore) {
+            articleNavigationMore.addEventListener('click', () => {
+                if (!articleNavigationContent) return;
+                articleNavigationContent.classList.add('is-open');
+                articleNavigationContent.removeAttribute('data-collapsed');
+            });
+        }
+
+        articleNavigation.querySelectorAll('.navigation-article__link').forEach((link) => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                let href = this.getAttribute('href').substring(1);
-
+                const href = this.getAttribute('href').substring(1);
                 const scrollTarget = document.getElementById(href);
+                if (!scrollTarget) return;
 
-                // const topOffset = document.querySelector('.scrollto').offsetHeight;
                 const topOffset = 180;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
@@ -1172,9 +1184,12 @@ if (articleNavigation) {
                 });
             });
         });
-    } else {
-        articleNavigation.querySelector('.navigation-article__content').remove();
-        articleNavigation.querySelector('.navigation-article__wrapper').style.justifyContent = 'center';
+    } else if (articleNavigationContent) {
+        articleNavigationContent.remove();
+        const wrapper = articleNavigation.querySelector('.navigation-article__wrapper');
+        if (wrapper) {
+            wrapper.style.justifyContent = 'center';
+        }
     }
 }
 
@@ -1182,6 +1197,20 @@ if (articleNavigation) {
 
 
 
+
+/* wrap content tables for mobile scroll */
+const contentTables = document.querySelectorAll('.text__content table:not(.price__table)');
+if (contentTables.length > 0) {
+    contentTables.forEach((table) => {
+        if (table.parentElement && table.parentElement.classList.contains('table-scroll')) return;
+
+        const wrap = document.createElement('div');
+        wrap.className = 'table-scroll';
+        table.parentNode.insertBefore(wrap, table);
+        wrap.appendChild(table);
+    });
+}
+/* end wrap content tables */
 
 /*
 let animItems = document.querySelectorAll('._anim-items');
@@ -1316,3 +1345,57 @@ if (vacancies.length > 0) {
     });
 }
 /* end vacancies accordion */
+
+/* doctor page accordion */
+const doctorPage = document.querySelector('.doctor-page');
+if (doctorPage) {
+    const doctorAccordionItems = doctorPage.querySelectorAll('.doctor-page__block, .doctor-page__section');
+
+    doctorAccordionItems.forEach((section) => {
+        const title = section.querySelector('.doctor-page__block-title, .doctor-page__section-title');
+        if (!title) return;
+
+        title.addEventListener('click', () => {
+            if (window.innerWidth > 768) return;
+
+            const isOpen = section.classList.contains('is-open');
+
+            doctorAccordionItems.forEach((item) => {
+                item.classList.remove('is-open');
+            });
+
+            if (!isOpen) {
+                section.classList.add('is-open');
+            }
+        });
+    });
+}
+/* end doctor page accordion */
+
+/* doctor page more */
+const doctorDirections = document.querySelectorAll('.doctor-page__directions');
+if (doctorDirections.length > 0) {
+    doctorDirections.forEach((block) => {
+        const moreBtn = block.querySelector('.doctor-page__more');
+        if (!moreBtn) return;
+
+        moreBtn.addEventListener('click', () => {
+            block.classList.add('is-open');
+            block.removeAttribute('data-collapsed');
+        });
+    });
+}
+
+const doctorServices = document.querySelectorAll('.doctor-services__wrap');
+if (doctorServices.length > 0) {
+    doctorServices.forEach((block) => {
+        const moreBtn = block.querySelector('.doctor-services__more');
+        if (!moreBtn) return;
+
+        moreBtn.addEventListener('click', () => {
+            block.classList.add('is-open');
+            block.removeAttribute('data-collapsed');
+        });
+    });
+}
+/* end doctor page more */

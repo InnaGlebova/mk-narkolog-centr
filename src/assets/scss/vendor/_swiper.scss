@@ -1,202 +1,232 @@
 /* swiper */
 
 .swiper-button-disabled {
-    cursor: auto;
-    opacity: .5;
-    pointer-events: none;
+  cursor: auto;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
+.swiper-btns {
+  display: flex;
+  gap: 30px;
+}
 
 .slider-button__prev,
 .slider-button__next {
-    border-radius: 50%;
-    background-color: var(--primary-blue);
-    width: 64px;
-    height: 64px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all .4s ease;
+  border-radius: 50%;
+  background-color: var(--content-blue);
+  width: 49px;
+  height: 49px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-
 .slider-button__prev::before {
-    position: absolute;
-    display: block;
-    content: '';
-    background: url(../img/icons/prev.svg) center center no-repeat;
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    background-size: cover;
+  position: absolute;
+  display: block;
+  content: "";
+  background: url(../img/icons/prev.svg) center center no-repeat;
+  width: 15px;
+  height: 22px;
+  object-fit: contain;
+  background-size: contain;
 
-    @supports not (background: url("../img/icons/prev.svg")) {
-        background: url("../img/icons/prev.png") center center no-repeat;
-    }
+  @supports not (background: url("../img/icons/prev.svg")) {
+    background: url("../img/icons/prev.png") center center no-repeat;
+  }
 }
 
 .slider-button__next::before {
-    position: absolute;
-    display: block;
-    content: '';
-    background: url(../img/icons/next.svg) center center no-repeat;
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    background-size: cover;
+  position: absolute;
+  display: block;
+  content: "";
+  background: url(../img/icons/next.svg) center center no-repeat;
+  width: 15px;
+  height: 22px;
+  object-fit: contain;
+  background-size: contain;
 
-    @supports not (background: url("../img/icons/next.svg")) {
-        background: url("../img/icons/next.png") center center no-repeat;
-    }
+  @supports not (background: url("../img/icons/next.svg")) {
+    background: url("../img/icons/next.png") center center no-repeat;
+  }
 }
 
 .slider-button__prev:hover,
 .slider-button__next:hover {
-    background-color: #fff;
-}
-
-.slider-button__prev:hover::before {
-    background: url(../img/icons/prev-hover.svg) center center no-repeat;
-    object-fit: cover;
-    background-size: cover;
-
-    @supports not (background: url("../img/icons/prev-hover.svg")) {
-        background: url("../img/icons/prev-hover.png") center center no-repeat;
-    }
-}
-
-.slider-button__next:hover::before {
-    background: url(../img/icons/next-hover.svg) center center no-repeat;
-    object-fit: cover;
-    background-size: cover;
-
-    @supports not (background: url("../img/icons/next-hover.svg")) {
-        background: url("../img/icons/next-hover.png") center center no-repeat;
-    }
-}
-
-.swiper-btns {
-    display: flex;
-    gap: 25px;
+  background-color: var(--primary-coral);
 }
 
 .swiper__top-wrap {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .swiper__top-wrap {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 .swiper {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 .swiper__controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.swiper__controls-decor {
+  width: 100%;
+  height: 1px;
+  background: #38416133;
 }
 
 .swiper__pagination {
-    display: flex !important;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 0;
-    width: auto;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 0;
+  width: auto;
 
-    .swiper-pagination-bullet {
-        margin: 0 !important;
-        width: 20px;
-        height: 3px;
-        border: none;
-        border-radius: 2px;
-        background-color: var(--primary-light);
-        opacity: 1;
-
-        &:hover {
-            border: none;
-            background-color: var(--primary-blue);
-        }
-
-        &.swiper-pagination-bullet-active {
-            height: 3px;
-            width: 20px;
-            background-color: var(--primary-blue);
-            border: none;
-        }
-    }
-}
-
-
-.swiper-pagination-bullets {
-    position: static;
-    z-index: 10;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    display: none;
-    max-width: fit-content;
-}
-
-.swiper-pagination-bullet {
-    background-color: #db6f67;
-    position: relative;
-    border-radius: 50%;
-    transition: background-color .3s linear, border-color .3s linear;
-    border: 1px solid #eaeaea;
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    width: 20px;
+    height: 5px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-light);
     opacity: 1;
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
-    height: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
 
     &:hover {
-        border-color: var(--primary-blue);
+      border: none;
+      background-color: var(--content-blue);
     }
 
     &.swiper-pagination-bullet-active {
-        background-color: var(--primary-blue);
-        border-color: var(--primary-blue);
-        width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
-        height: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
+      height: 5px;
+      width: 20px;
+      background-color: var(--content-blue);
+      border: none;
     }
+  }
+}
+
+.swiper-pagination-bullets {
+  position: static;
+  z-index: 10;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  max-width: fit-content;
+}
+
+.swiper-pagination-bullet {
+  background-color: #db6f67;
+  position: relative;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s linear,
+    border-color 0.3s linear;
+  border: 1px solid #eaeaea;
+  opacity: 1;
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 7px)
+  );
+  height: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 7px)
+  );
+
+  &:hover {
+    border-color: var(--primary-blue);
+  }
+
+  &.swiper-pagination-bullet-active {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    width: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 14px)
+    );
+    height: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 14px)
+    );
+  }
+}
+
+.custom-wrapper__swiper {
+  margin-bottom: 50px;
 }
 
 /* swiper media */
 
 @media (max-width: 1000px) {
+  .slider-button__next,
+  .slider-button__prev {
+    width: 40px;
+    height: 40px;
+  }
 
-    .slider-button__next,
-    .slider-button__prev {
-        width: 40px;
-        height: 40px;
-    }
+  .slider-button__prev:before,
+  .slider-button__next:before {
+    width: 15px;
+    height: 15px;
+  }
 
-    .slider-button__prev:before,
-    .slider-button__next:before {
-        width: 15px;
-        height: 15px;
-    }
-
-    .swiper-btns {
-        gap: 16px;
-    }
+  .swiper-btns {
+    gap: 16px;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+  .swiper__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
 
-    .slider-button__next,
-    .slider-button__prev {
-        display: none;
-    }
+  .swiper__controls-decor {
+    display: none;
+  }
 
-    .swiper-pagination-bullets {
-        display: flex;
-    }
+  .swiper__controls .swiper-btns {
+    display: contents;
+  }
+
+  .swiper__controls .slider-button__prev {
+    order: 1;
+    flex-shrink: 0;
+  }
+
+  .swiper__controls .swiper__pagination {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .swiper__controls .slider-button__next {
+    order: 3;
+    flex-shrink: 0;
+  }
+
+  .swiper__title, .swiper__head, .swiper__controls, .swiper {
+    padding: 0 15px;
+  }
+
+  .swiper__container {
+    padding: 0;
+  }
+
+
 }

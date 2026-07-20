@@ -146,13 +146,84 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-table,
-tr,
-td,
-thead,
-tbody {
+table:not(.price__table) {
+  width: 100%;
+  margin: 0 0 30px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--content-white);
+}
+
+table:not(.price__table) thead,
+table:not(.price__table) tbody {
+  display: table-row-group;
   width: auto;
-  display: block;
+}
+
+table:not(.price__table) tr {
+  display: table-row;
+  width: auto;
+}
+
+table:not(.price__table) th,
+table:not(.price__table) td {
+  display: table-cell;
+  width: auto;
+  padding: 16px 20px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--content-grey);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  vertical-align: top;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+table:not(.price__table) tr:last-child th,
+table:not(.price__table) tr:last-child td {
+  border-bottom: none;
+}
+
+table:not(.price__table) th {
+  background: var(--primary-coral);
+  color: var(--content-white);
+  font-weight: 600;
+}
+
+table:not(.price__table) tbody tr:nth-child(even) td {
+  background: #f9f9f9;
+}
+
+table:not(.price__table) tbody tr:nth-child(odd) td {
+  background: var(--content-white);
+}
+
+/* если заголовок в первой строке tbody без thead */
+table:not(.price__table) tbody tr:first-child th {
+  background: var(--primary-coral);
+  color: var(--content-white);
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(even) td {
+  background: var(--content-white);
+}
+
+table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(odd) td {
+  background: #f9f9f9;
+}
+
+.table-scroll {
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar-button {
@@ -182,6 +253,7 @@ tbody {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 .container {
@@ -291,11 +363,9 @@ tbody {
   font-size: 14px;
   color: #fff;
   line-height: 1;
-  text-shadow: 1px 1px 4px #000;
 }
 
 .breadcrumbs li:last-of-type {
-  color: #ffffffde;
 
   &::after {
     display: none;
@@ -470,6 +540,7 @@ tbody {
 
   .standart-btn {
     padding: 14px 60px;
+    font-size: 14px;
   }
 
   .form__input {
@@ -479,6 +550,24 @@ tbody {
   .title__bg {
     padding: 0 0 40px;
     margin-bottom: 40px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .table-scroll table:not(.price__table) {
+    min-width: 640px;
+    margin-bottom: 0;
+  }
+
+  table:not(.price__table) th,
+  table:not(.price__table) td {
+    padding: 12px 14px;
+    font-size: 14px;
   }
 }
 
@@ -490,6 +579,7 @@ tbody {
 @import "vendor/_popup";
 @import "vendor/_why";
 @import "vendor/_doctors";
+@import "vendor/_doctor-page";
 @import "vendor/_swiper";
 @import "vendor/_garant";
 @import "vendor/_text";
@@ -520,5 +610,7 @@ tbody {
 @import "vendor/_sitemap";
 @import "vendor/_calculator";
 @import "vendor/_vacancys";
+@import "vendor/_doctors-page";
+@import "vendor/_article-page";
 @import "vendor/_header";
 @import "vendor/_footer";
