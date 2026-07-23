@@ -241,72 +241,6 @@
   }
 }
 
-@media (max-width: 750px) {
-  .price__table-wrap {
-    overflow-x: auto;
-
-    .price__table {
-      min-width: 640px;
-    }
-
-    .price__table-name,
-    .price__table-price,
-    .price__table-btn {
-      font-size: 14px;
-    }
-
-    .price__table-code {
-      font-size: 12px;
-    }
-
-    .price__table-th {
-      font-size: 12px;
-    }
-  }
-
-  .price-page .price__table-wrap {
-    overflow: hidden;
-
-    .price__table {
-      min-width: 0;
-    }
-  }
-
-  .price__table-item {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .price__table-wrap .price__table-item {
-    flex-direction: unset;
-    gap: unset;
-  }
-
-  .price__table {
-    margin-bottom: 60px;
-  }
-
-  .price__table-name,
-  .price__table-price,
-  .price__table-btn {
-    font-size: 14px;
-  }
-}
-
-.price-page__title {
-  display: block;
-  width: 100%;
-  color: var(--content-blue);
-  font-size: 45px;
-  line-height: 1.1;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 50px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: default;
-}
 
 .price-page .price__table-wrap {
   margin-bottom: 90px;
@@ -357,17 +291,18 @@
   .price-page .price__table-wrap {
     display: none;
     margin-bottom: 20px;
-    border: 1px solid rgba(56, 65, 97, 0.2);
-    border-radius: 16px;
-    overflow: hidden;
-    background-color: #fff;
   }
 
   .price-page__inner.is-open .price__table-wrap {
     display: block;
   }
 
-  .price-page .price__table-wrap {
+  .price__table-wrap {
+    border: 1px solid rgba(56, 65, 97, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+
     .price__table {
       display: block;
       width: 100%;
@@ -385,10 +320,14 @@
 
     .price__table-item {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      gap: 6px;
       padding: 16px;
       border-bottom: 1px solid rgba(56, 65, 97, 0.12);
+      position: relative;
 
       &::after {
         display: none;
@@ -403,49 +342,54 @@
     .price__table-name,
     .price__table-price,
     .price__table-action {
-      display: block;
-      width: 100%;
       padding: 0;
+      vertical-align: top;
     }
 
     .price__table-code {
+      order: 1;
+      flex: 0 0 100%;
       color: var(--content-grey);
       font-size: 13px;
+      font-weight: 400;
       line-height: 1.3;
     }
 
     .price__table-name {
-      color: var(--content-blue);
+      order: 2;
+      flex: 0 0 100%;
+      color: var(--content-black);
       font-size: 15px;
+      font-weight: 400;
       line-height: 1.35;
     }
 
     .price__table-price {
-      display: inline-block;
+      order: 3;
+      flex: 0 0 auto;
       width: auto;
+      margin-top: 6px;
+      color: var(--content-black);
       font-size: 16px;
       font-weight: 700;
+      line-height: 1.3;
+      white-space: nowrap;
     }
 
     .price__table-action {
-      display: inline-block;
+      order: 3;
+      flex: 0 0 auto;
       width: auto;
-      text-align: left;
+      margin-top: 6px;
       margin-left: auto;
-    }
-
-    .price__table-item {
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
-
-    .price__table-code,
-    .price__table-name {
-      flex: 0 0 100%;
+      text-align: right;
     }
 
     .price__table-btn {
+      color: var(--content-blue);
       font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
     }
   }
 
@@ -463,7 +407,37 @@
 
   .price__bottom-title {
     white-space: normal;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
+
+  .price__table {
+    margin-bottom: 60px;
+  }
+
+  .price__bottom-social-item {
+    width: 40px;
+    height: 40px;
+
+  }
+
+  .price__bottom-social-item img {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.price-page__title {
+  display: block;
+  width: 100%;
+  color: var(--content-blue);
+  font-size: 45px;
+  line-height: 1.1;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: default;
 }

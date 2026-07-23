@@ -214,11 +214,11 @@ table:not(.price__table) tbody tr:first-child th {
   border-bottom: 1px solid #e5e7eb;
 }
 
-table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(even) td {
+table:not(.price__table) tbody tr:first-child:has(th)~tr:nth-child(even) td {
   background: var(--content-white);
 }
 
-table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(odd) td {
+table:not(.price__table) tbody tr:first-child:has(th)~tr:nth-child(odd) td {
   background: #f9f9f9;
 }
 
@@ -402,10 +402,10 @@ table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(odd) td {
     position: absolute;
     display: block;
     inset: 0;
-    background-image: url("../img/decor3.png");
+    background-image: url("../img/intro/intro-bg2.png");
     max-width: 1920px;
     margin: 0 auto;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
   }
 }
@@ -505,12 +505,12 @@ table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(odd) td {
 
 @media (max-width: 768px) {
   .section-offset {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .breadcrumbs,
@@ -568,6 +568,143 @@ table:not(.price__table) tbody tr:first-child:has(th) ~ tr:nth-child(odd) td {
   table:not(.price__table) td {
     padding: 12px 14px;
     font-size: 14px;
+  }
+}
+
+
+.scroll-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 4.3vw;
+  bottom: 100px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary-coral);
+  background-color: var(--primary-coral);
+  opacity: 0;
+  transform: rotate(-90deg);
+  transition: opacity 0.7s;
+  cursor: pointer;
+  transition: background 0.3s linear;
+
+  & svg path {
+    transition: all 0.3s linear;
+  }
+
+  &:hover {
+    background-color: var(--primary-coral);
+
+    & svg path {
+      stroke: var(--primary-coral);
+    }
+  }
+}
+
+@keyframes transformItem {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scale-item {
+  transform: scale(0.6);
+  opacity: 0;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.rotate-item {
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition:
+    transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.3s ease;
+
+  &:nth-child(2n) {
+    transition:
+      transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.3s ease;
+  }
+
+  &:nth-child(3n) {
+    transition:
+      transform 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.3s ease;
+  }
+
+  &:nth-child(5n) {
+    transition:
+      transform 2s cubic-bezier(0.075, 0.82, 0.165, 1),
+      opacity 0.3s ease;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.transform-item {
+  opacity: 0;
+}
+
+.text-animation {
+  opacity: 0;
+}
+
+.animation-active {
+  &.scale-item {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &.rotate-item {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+
+  &.text-animation {
+    opacity: 1;
+    animation: textAnimation 0.4s forwards;
+  }
+
+  &.transform-item {
+    opacity: 1;
+    animation: transformItem 0.4s forwards;
+
+    &:nth-child(2n) {
+      animation: transformItem 0.6s forwards;
+    }
+
+    &:nth-child(3n) {
+      animation: transformItem 0.7s forwards;
+    }
+
+    &:nth-child(5n) {
+      animation: transformItem 0.8s forwards;
+    }
+
+    &:nth-child(7n) {
+      animation: transformItem 0.9s forwards;
+    }
   }
 }
 

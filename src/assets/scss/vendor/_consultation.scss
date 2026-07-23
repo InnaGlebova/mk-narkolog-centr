@@ -156,6 +156,7 @@
   .consultation__form {
     max-width: 100%;
   }
+
   .consultation__inner {
     margin-top: 0;
   }
@@ -165,11 +166,14 @@
   .consultation__inner {
     padding: 15px;
     min-height: auto;
+    border-radius: 10px;
   }
 
   .consultation__form {
     margin-bottom: 0;
+    border-radius: 10px;
   }
+
   .consultation__title {
     font-size: 20px;
     margin-bottom: 5px;

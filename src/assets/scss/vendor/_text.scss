@@ -2,7 +2,7 @@
 .text__content {
 
     &>h2 {
-        color: var(--primary-blue);
+        color: var(--content-blue);
         font-size: 25px;
         font-weight: 600;
         line-height: 1.3;
@@ -10,14 +10,14 @@
     }
 
     &>h3 {
-        color: var(--primary-blue);
+        color: var(--content-blue);
         font-size: 22px;
         line-height: 1.1;
         margin-bottom: 20px;
     }
 
     &>h4 {
-        color: var(--primary-blue);
+        color: var(--content-blue);
         font-size: 20px;
         line-height: 1.1;
         margin-bottom: 20px;
@@ -49,7 +49,7 @@
                 position: absolute;
                 display: block;
                 content: '';
-                background: var(--primary-blue);
+                background: var(--content-blue);
                 width: 7px;
                 height: 7px;
                 border-radius: 50%;
@@ -120,7 +120,7 @@
     }
 
     &>blockquote {
-        background: #38416108;
+        background: var(--background-lightblue);
         padding: 40px;
         color: var(--content-black);
         font-weight: 500;
@@ -129,6 +129,7 @@
         position: relative;
         padding-left: 140px;
         margin: 45px 0;
+
         &::before {
             content: "";
             position: absolute;
@@ -157,7 +158,7 @@
     max-width: 100%;
     min-width: 0;
 
-    > * {
+    >* {
         grid-column: 1 / -1;
         min-width: 0;
         max-width: 100%;
@@ -165,17 +166,17 @@
         word-wrap: break-word;
     }
 
-    > article,
-    > p:has(> a[href$=".pdf"]),
-    > p:has(> a[href$=".docx"]),
-    > p:has(> a[href$=".doc"]),
-    > p:has(> strong > a[href$=".pdf"]),
-    > p:has(> strong > a[href$=".docx"]),
-    > p:has(> strong > a[href$=".doc"]) {
+    >article,
+    >p:has(> a[href$=".pdf"]),
+    >p:has(> a[href$=".docx"]),
+    >p:has(> a[href$=".doc"]),
+    >p:has(> strong > a[href$=".pdf"]),
+    >p:has(> strong > a[href$=".docx"]),
+    >p:has(> strong > a[href$=".doc"]) {
         grid-column: auto;
     }
 
-    > h3 {
+    >h3 {
         color: var(--content-blue);
         font-size: 28px;
         font-weight: 600;
@@ -187,7 +188,7 @@
         }
     }
 
-    > p {
+    >p {
         margin: 0;
         color: var(--content-grey);
         font-size: 16px;
@@ -208,12 +209,13 @@
             color: var(--primary-coral);
         }
     }
-    > p:has(> a[href$=".pdf"]),
-    > p:has(> a[href$=".docx"]),
-    > p:has(> a[href$=".doc"]),
-    > p:has(> strong > a[href$=".pdf"]),
-    > p:has(> strong > a[href$=".docx"]),
-    > p:has(> strong > a[href$=".doc"]) {
+
+    >p:has(> a[href$=".pdf"]),
+    >p:has(> a[href$=".docx"]),
+    >p:has(> a[href$=".doc"]),
+    >p:has(> strong > a[href$=".pdf"]),
+    >p:has(> strong > a[href$=".docx"]),
+    >p:has(> strong > a[href$=".doc"]) {
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -234,26 +236,20 @@
         }
     }
 
-    > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(
-        p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a) + p
-    ) {
+    >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a) + p) {
         border-radius: 16px 0 0 16px;
     }
 
-    > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(
-        :has(+ p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a))
-    ) {
+    >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not( :has(+ p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a))) {
         border-radius: 0 16px 16px 0;
     }
 
-    > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]) + p:has(
-        > a[href$=".pdf"],
+    >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"])+p:has(> a[href$=".pdf"],
         > a[href$=".docx"],
         > a[href$=".doc"],
         > strong > a[href$=".pdf"],
         > strong > a[href$=".docx"],
-        > strong > a[href$=".doc"]
-    )::after {
+        > strong > a[href$=".doc"])::after {
         content: "";
         position: absolute;
         left: 0;
@@ -264,7 +260,7 @@
     }
 
     /* карточки надзорных органов */
-    > article {
+    >article {
         display: flex;
         flex-direction: column;
         gap: 14px;
@@ -320,12 +316,12 @@
         }
     }
 
-    > ul {
+    >ul {
         margin: 0;
         padding: 0;
         list-style: none;
 
-        > li {
+        >li {
             position: relative;
             padding-left: 18px;
             margin-bottom: 10px;
@@ -352,17 +348,17 @@
         grid-template-columns: minmax(0, 1fr);
         row-gap: 12px;
 
-        > article,
-        > p:has(> a[href$=".pdf"]),
-        > p:has(> a[href$=".docx"]),
-        > p:has(> a[href$=".doc"]),
-        > p:has(> strong > a[href$=".pdf"]),
-        > p:has(> strong > a[href$=".docx"]),
-        > p:has(> strong > a[href$=".doc"]) {
+        >article,
+        >p:has(> a[href$=".pdf"]),
+        >p:has(> a[href$=".docx"]),
+        >p:has(> a[href$=".doc"]),
+        >p:has(> strong > a[href$=".pdf"]),
+        >p:has(> strong > a[href$=".docx"]),
+        >p:has(> strong > a[href$=".doc"]) {
             grid-column: 1 / -1;
         }
 
-        > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]) {
+        >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]) {
             border-radius: 0 !important;
 
             &::after {
@@ -370,19 +366,15 @@
             }
         }
 
-        > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(
-            p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a) + p
-        ) {
+        >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a) + p) {
             border-radius: 16px 16px 0 0 !important;
         }
 
-        > p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not(
-            :has(+ p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a))
-        ) {
+        >p:has(> a[href$=".pdf"], > a[href$=".docx"], > a[href$=".doc"], > strong > a[href$=".pdf"], > strong > a[href$=".docx"], > strong > a[href$=".doc"]):not( :has(+ p:has(a[href$=".pdf"], a[href$=".docx"], a[href$=".doc"], strong > a))) {
             border-radius: 0 0 16px 16px !important;
         }
 
-        > h3 {
+        >h3 {
             font-size: 24px;
             margin-top: 28px;
         }
@@ -391,11 +383,11 @@
 
 @media (max-width: 650px) {
     .text__content--policy {
-        > h3 {
+        >h3 {
             font-size: 22px;
         }
 
-        > article {
+        >article {
             padding: 18px;
 
             h4 {
@@ -407,7 +399,7 @@
             }
         }
 
-        > p {
+        >p {
             font-size: 15px;
         }
     }
@@ -415,7 +407,7 @@
 
 /* text media */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .text__content>h2 {
         font-size: 40px;
         margin-bottom: 20px;
@@ -444,7 +436,7 @@
 
     .text__content>blockquote {
         font-size: 16px;
-        padding: 16px;
+        padding: 90px 20px 20px 20px;
     }
 
     .text__content>blockquote>span {
@@ -468,27 +460,57 @@
 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .text__content>h2 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .text__content>blockquotem .text__content>blockquote>span {
         font-size: 14px;
     }
 
+
+    .text__content>blockquote::before {
+        width: 48px;
+        top: 20px;
+        left: 20px;
+    }
+
     .text__content {
         &>h3 {
-            font-size: 24px;
+            font-size: 18px;
         }
 
         &>h4 {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 
     .text__content>ul>li>b,
     .text__content>ol>li>b {
         font-size: 14px;
+    }
+
+    .text__content>ul>li::before {
+        width: 5px;
+        height: 5px;
+    }
+
+    .text__content>ul>li {
+        padding-left: 15px;
+    }
+
+    .text__content>ol>li:before {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .text__content>ol>li {
+        padding-left: 38px;
+    }
+
+    .text__content>picture {
+        border-radius: 10px;
     }
 }

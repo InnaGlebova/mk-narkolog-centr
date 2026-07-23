@@ -1,9 +1,5 @@
 /* stock */
 
-.stock__container {
-    padding: 0 15px;
-}
-
 .stock__title {
     text-align: left;
     margin: 0 0 40px;
@@ -13,10 +9,6 @@
     margin-bottom: 32px;
 }
 
-.stock__swiper {
-    padding: 0;
-    overflow: hidden;
-}
 
 .stock__item {
     display: flex;
@@ -152,5 +144,13 @@
 
     .stock__item-img {
         height: 160px;
+    }
+
+    .stock__title {
+        text-align: center;
+    }
+
+    .stock__item {
+        border-radius: 10px;
     }
 }

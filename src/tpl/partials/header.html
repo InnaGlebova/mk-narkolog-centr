@@ -1,9 +1,9 @@
 <header class="header" id="header">
-    <!-- <div class="header__plashka">
+    <div class="header__plashka">
         <div class="container header__plashka-inner">
             <p>Дополнительная скидка 10% действующим служащим Министерства обороны</p>
         </div>
-    </div> -->
+    </div>
     <div class="container">
         <div class="header__wrapper-maxHeight">
             <div class="header-mobile">
@@ -11,7 +11,7 @@
                     <a href="index.html" class="header__logo">
                         <picture class="header__logo-icon">
                             <source srcset="assets/img/icons/logo.svg" type="image/svg+xml">
-                            <img src="assets/img/icons/logo.svg" alt="">
+                            <img src="assets/img/icons/logo.png" alt="">
                         </picture>
                         <span class="header__logo-text">
                             <span class="header__logo-title">ПОХМЕЛОЧНАЯ</span>
@@ -29,18 +29,20 @@
                 </div>
                 <div class="header-mobile__phones">
                     <div class="header__contact-item">
-                        <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
-                        </span>
+                        <picture class="header__contact-icon">
+                            <source srcset="assets/img/icons/phone-blue.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
+                        </picture>
                         <div class="header__contact-body">
                             <a href="tel:88002004816" class="header__phone-link">8 800 200-48-16</a>
                             <span class="header__contact-descr">Бесплатно по РФ</span>
                         </div>
                     </div>
                     <div class="header__contact-item">
-                        <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
-                        </span>
+                        <picture class="header__contact-icon">
+                            <source srcset="assets/img/icons/phone-blue.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
+                        </picture>
                         <div class="header__contact-body">
                             <a href="tel:83472294665" class="header__phone-link">8 347 229-46-65</a>
                             <span class="header__contact-descr">Круглосуточно, 24/7</span>
@@ -64,9 +66,10 @@
                 </a>
                 <div class="header__top-contacts">
                     <div class="header__contact-item header__top-address">
-                        <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-pin.svg" alt="">
-                        </span>
+                        <picture class="header__contact-icon">
+                            <source srcset="assets/img/icons/point-black.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/point-black.png" alt="">
+                        </picture>
                         <div class="header__contact-body">
                             <button class="header__address popup-btn" data-path="popup-city">
                                 <span class="header__address-city">г. Уфа, ул. Авроры, 5/12</span>
@@ -74,9 +77,10 @@
                             <span class="header__contact-descr">Выезд бригады 24/7</span>
                         </div>
                     </div>
+                    <div class="header__top-phone-wrap">
                     <div class="header__contact-item header__top-phone">
                         <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
                         </span>
                         <div class="header__contact-body">
                             <a href="tel:88002004816" class="header__phone-link">8 800 200-48-16</a>
@@ -85,13 +89,14 @@
                     </div>
                     <div class="header__contact-item header__top-phone">
                         <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
                         </span>
                         <div class="header__contact-body">
                             <a href="tel:83472294665" class="header__phone-link">8 347 229-46-65</a>
                             <span class="header__contact-descr">Круглосуточно, 24/7</span>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div class="header__top-actions">
                     <div class="header__social">
@@ -1003,7 +1008,7 @@
                 <div class="header-mobile__phones header-mobile__phones_menu">
                     <div class="header__contact-item">
                         <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
                         </span>
                         <div class="header__contact-body">
                             <a href="tel:88002004816" class="header__phone-link">8 800 200-48-16</a>
@@ -1012,7 +1017,7 @@
                     </div>
                     <div class="header__contact-item">
                         <span class="header__contact-icon">
-                            <img src="assets/img/icons/header-phone.svg" alt="">
+                            <img src="assets/img/icons/phone-blue.svg" alt="">
                         </span>
                         <div class="header__contact-body">
                             <a href="tel:83472294665" class="header__phone-link">8 347 229-46-65</a>
@@ -1023,23 +1028,23 @@
                 <button class="header__cta-btn popup-btn header-mobile__bottom-btn change-item__btn change-item__btn_current"
                     data-path="popup-change">Вызвать специалиста</button>
                 <div class="header__social header__social_menu">
-                    <button class="header__social-btn popup-btn" data-path="popup-question" aria-label="Задать вопрос">
-                        <img src="assets/img/icons/header-chat.svg" alt="">
-                    </button>
+                    <a class="header__social-btn" href="#" aria-label="MAX">
+                        <img src="assets/img/social/max.svg" alt="max">
+                    </a>
                     <a class="header__social-btn" href="#" aria-label="Telegram">
-                        <img src="assets/img/social/tg.svg" alt="">
+                        <img src="assets/img/social/tg.svg" alt="telegram">
                     </a>
                     <a class="header__social-btn" href="#" aria-label="Одноклассники">
-                        <img src="assets/img/social/ok.svg" alt="">
+                        <img src="assets/img/social/ok.svg" alt="ok">
                     </a>
                     <a class="header__social-btn" href="#" aria-label="ВКонтакте">
-                        <img src="assets/img/social/vk.svg" alt="">
+                        <img src="assets/img/social/vk.svg" alt="vk">
                     </a>
                 </div>
                 <div class="header-mobile__legal">
                     <p>ООО «Медицинская компания «Наркологический центр»</p>
                     <p>450092, Республика Башкортостан, г. Уфа, ул. Авроры, д. 5, к. 12</p>
-                    <a href="mailto:info@mk-narkolog-centr">info@mk-narkolog-centr</a>
+                    <p>Электронная почта: <a href="mailto:info@mk-narkolog-centr">info@mk-narkolog-centr</a></p>
                 </div>
             </div>
         </div>

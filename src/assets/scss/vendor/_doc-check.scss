@@ -110,14 +110,19 @@
     white-space: nowrap;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
+    .doc-check {
+        padding: 80px 0 80px;
+    }
+
     .doc-check__cards {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 
     .doc-check__card {
         padding: 22px 18px 18px;
+        border-radius: 10px;
     }
 
     .doc-check__card-meta {
@@ -128,5 +133,27 @@
 
     .doc-check__card-meta-item {
         white-space: normal;
+    }
+
+    .doc-check__card-name {
+        font-size: 20px;
+    }
+
+    .doc-check__card-picture {
+        width: 70px;
+        height: 70px;
+    }
+
+    .doc-check__card-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .doc-check__card-meta-item {
+        font-size: 15px;
+    }
+
+    .doc-check__card-meta {
+        gap: 10px;
     }
 }

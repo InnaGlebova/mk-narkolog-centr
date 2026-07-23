@@ -84,6 +84,11 @@
 }
 
 @media (max-width: 650px) {
+
+    .what__inner {
+        gap: 15px;
+    }
+
     .what__inner>* {
         flex-basis: 100%;
     }
@@ -91,11 +96,13 @@
     .what__item {
         padding: 14px;
         gap: 14px;
+        border-radius: 10px;
     }
 
     .what__item-picture {
-        width: 64px;
-        height: 64px;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
     }
 
     .what__item-title {

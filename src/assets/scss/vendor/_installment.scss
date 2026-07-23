@@ -153,6 +153,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .installment__inner {
+    border-radius: 20px;
+  }
+
   .installment__card-value {
     font-size: 40px;
   }
@@ -190,5 +195,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
   }
 }

@@ -94,9 +94,9 @@
 
 <section class="service section-offset">
   <div class="container service__container">
-    <h2 class="section-title">Услуги и цены</h2>
-    <div class="service__inner">
-      <a href="#" class="service__item">
+    <h2 class="section-title animation-item text-animation">Услуги и цены</h2>
+    <div class="service__inner animation-group">
+      <a href="#" class="service__item scale-item animation-item">
         <div class="service__item-head">
           <p class="service__item-name">Лечение алкоголизма</p>
           <span class="service__item-price">от 2 200 руб.</span>
@@ -112,7 +112,7 @@
         </picture>
       </a>
 
-      <a href="#" class="service__item">
+      <a href="#" class="service__item animation-item scale-item">
         <div class="service__item-head">
           <p class="service__item-name">Вывод из запоя на дому</p>
           <span class="service__item-price">от 3 100 руб.</span>
@@ -128,7 +128,7 @@
         </picture>
       </a>
 
-      <a href="#" class="service__item">
+      <a href="#" class="service__item animation-item scale-item">
         <div class="service__item-head">
           <p class="service__item-name">Капельница от запоя</p>
           <span class="service__item-price">от 3500 руб</span>
@@ -144,7 +144,7 @@
         </picture>
       </a>
 
-      <a href="#" class="service__item">
+      <a href="#" class="service__item animation-item scale-item">
         <div class="service__item-head">
           <p class="service__item-name">Вызов нарколога на дом</p>
           <span class="service__item-price">от 3 100 руб.</span>
@@ -160,7 +160,7 @@
         </picture>
       </a>
 
-      <a href="#" class="service__item">
+      <a href="#" class="service__item animation-item scale-item">
         <div class="service__item-head">
           <p class="service__item-name">Детоксикация организма</p>
           <span class="service__item-price">от 3 500 руб.</span>
@@ -176,7 +176,7 @@
         </picture>
       </a>
 
-      <a href="#" class="service__item">
+      <a href="#" class="service__item animation-item scale-item">
         <div class="service__item-head">
           <p class="service__item-name">Кодирование от алкоголизма</p>
           <span class="service__item-price">от 4 900 руб.</span>
@@ -202,44 +202,62 @@
 
 <section class="advantages section-offset">
   <div class="container advantages__container">
-    <h2 class="section-title advantages__title">Наши преимущества</h2>
-    <div class="advantages__inner">
-      <div class="advantages__item">
-        <picture class="advantages__item-picture">
-          <source srcset="assets/img/advantages/1.svg" type="image/svg+xml" />
-          <img
-            class="advantages__item-img"
-            src="assets/img/advantages/1.png"
-            alt=""
-            loading="lazy"
-          />
-        </picture>
-        <p class="advantages__item-text">Высокое качество услуг</p>
+    <h2 class="section-title advantages__title animation-item text-animation">
+      Наши преимущества
+    </h2>
+    <div class="advantages__inner custom-wrapper__swiper">
+      <div class="swiper advantages__swiper">
+        <div class="swiper-wrapper advantages__swiper-wrapper">
+          <div class="swiper-slide advantages__item animation-item scale-item">
+            <picture class="advantages__item-picture">
+              <source
+                srcset="assets/img/advantages/1.svg"
+                type="image/svg+xml"
+              />
+              <img
+                class="advantages__item-img"
+                src="assets/img/advantages/1.png"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <p class="advantages__item-text">Высокое качество услуг</p>
+          </div>
+          <div class="swiper-slide advantages__item animation-item scale-item">
+            <picture class="advantages__item-picture">
+              <source
+                srcset="assets/img/advantages/2.svg"
+                type="image/svg+xml"
+              />
+              <img
+                class="advantages__item-img"
+                src="assets/img/advantages/2.png"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <p class="advantages__item-text">Конфиденциальность лечения</p>
+          </div>
+          <div class="swiper-slide advantages__item animation-item scale-item">
+            <picture class="advantages__item-picture">
+              <source
+                srcset="assets/img/advantages/2.svg"
+                type="image/svg+xml"
+              />
+              <img
+                class="advantages__item-img"
+                src="assets/img/advantages/2.png"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <p class="advantages__item-text">100% гарантия трезвости</p>
+          </div>
+        </div>
       </div>
-      <div class="advantages__item">
-        <picture class="advantages__item-picture">
-          <source srcset="assets/img/advantages/2.svg" type="image/svg+xml" />
-          <img
-            class="advantages__item-img"
-            src="assets/img/advantages/2.png"
-            alt=""
-            loading="lazy"
-          />
-        </picture>
-        <p class="advantages__item-text">Конфиденциальность лечения</p>
-      </div>
-      <div class="advantages__item">
-        <picture class="advantages__item-picture">
-          <source srcset="assets/img/advantages/2.svg" type="image/svg+xml" />
-          <img
-            class="advantages__item-img"
-            src="assets/img/advantages/2.png"
-            alt=""
-            loading="lazy"
-          />
-        </picture>
-        <p class="advantages__item-text">100% гарантия трезвости</p>
-      </div>
+    </div>
+    <div class="advantages__controls swiper__controls">
+      <div class="swiper__pagination advantages__pagination"></div>
     </div>
     <div class="advantages__descr">
       Наша платная наркологическая клиника — это команда квалифицированных
@@ -254,7 +272,9 @@
 
 <section class="price section-offset">
   <div class="container">
-    <h2 class="section-title price__title">Цены на услуги клиники</h2>
+    <h2 class="section-title price__title animation-item text-animation">
+      Цены на услуги клиники
+    </h2>
     <div class="price__wrap tabs-container">
       <div class="price_tabs tabs tabs-mobile">
         <div class="price_tabs__container tabs__container">
@@ -296,7 +316,7 @@
       <div class="price__tab-wrapper tab__wrapper">
         <div class="tab-content active price__content tab__content">
           <div class="price__inner">
-            <div class="price__table-wrap">
+            <div class="price__table-wrap animation-item transform-item">
               <table class="price__table">
                 <thead>
                   <tr class="price__table-head">
@@ -464,7 +484,7 @@
         </div>
         <div class="tab-content price__content tab__content">
           <div class="price__inner">
-            <div class="price__table-wrap">
+            <div class="price__table-wrap animation-item transform-item">
               <table class="price__table">
                 <thead>
                   <tr class="price__table-head">
@@ -572,7 +592,7 @@
         </div>
         <div class="tab-content price__content tab__content">
           <div class="price__inner">
-            <div class="price__table-wrap">
+            <div class="price__table-wrap animation-item transform-item">
               <table class="price__table">
                 <thead>
                   <tr class="price__table-head">
@@ -620,7 +640,7 @@
         </div>
         <div class="tab-content price__content tab__content">
           <div class="price__inner">
-            <div class="price__table-wrap">
+            <div class="price__table-wrap animation-item transform-item">
               <table class="price__table">
                 <thead>
                   <tr class="price__table-head">
@@ -713,7 +733,7 @@
         </div>
         <div class="tab-content price__content tab__content">
           <div class="price__inner">
-            <div class="price__table-wrap">
+            <div class="price__table-wrap animation-item transform-item">
               <table class="price__table">
                 <thead>
                   <tr class="price__table-head">
@@ -782,7 +802,7 @@
 <section class="departure section-offset">
   <div class="container departure__container">
     <div class="departure__header">
-      <h2 class="section-title departure__title">
+      <h2 class="section-title departure__title animation-item text-animation">
         Куда может приехать наш нарколог в Уфе
       </h2>
       <p class="departure__descr">
@@ -792,8 +812,10 @@
       </p>
     </div>
     <div class="departure__inner">
-      <aside class="departure__sidebar">
-        <h3 class="departure__sidebar-title">Как понять, возможен ли выезд</h3>
+      <aside class="departure__sidebar animation-item transform-item">
+        <h3 class="departure__sidebar-title animation-item text-animation">
+          Как понять, возможен ли выезд
+        </h3>
         <p class="departure__sidebar-text">
           Назовите оператору район, улицу и номер дома. Этого достаточно, чтобы
           быстро проверить зону обслуживания.
@@ -804,9 +826,8 @@
           загруженности бригад.
         </p>
         <div class="departure__notice">
-          Если пациент находится за пределами города, уточним условия отдельно —
-          по пригородам решение принимается по удалённости адреса и
-          загруженности бригад.
+          Выезд возможен на дом, в квартиру, гостиницу, офис и другие адреса,
+          где находится пациент.
         </div>
         <div class="departure__action">
           <button
@@ -822,7 +843,9 @@
         </div>
       </aside>
       <div class="departure__content">
-        <div class="departure__block">
+        <div
+          class="departure__block departure__block--districts animation-item transform-item"
+        >
           <h3 class="departure__block-title">Районы, куда мы выезжаем</h3>
           <ul class="departure__districts">
             <li class="departure__district">Дёмский район</li>
@@ -836,8 +859,12 @@
           </ul>
         </div>
         <div class="departure__row">
-          <div class="departure__block">
-            <h3 class="departure__block-title">Популярные улицы вызова</h3>
+          <div
+            class="departure__block departure__block--accordion is-open animation-item transform-item"
+          >
+            <button class="departure__block-title" type="button">
+              Популярные улицы вызова
+            </button>
             <ul class="departure__list">
               <li class="departure__list-item">ул. Ленина</li>
               <li class="departure__list-item">ул. Кирова</li>
@@ -849,8 +876,12 @@
               <li class="departure__list-item">ул. 8-го Марта</li>
             </ul>
           </div>
-          <div class="departure__block">
-            <h3 class="departure__block-title">Ближайшие города</h3>
+          <div
+            class="departure__block departure__block--accordion animation-item transform-item"
+          >
+            <button class="departure__block-title" type="button">
+              Ближайшие города
+            </button>
             <ul class="departure__list">
               <li class="departure__list-item">Нефтекамск</li>
               <li class="departure__list-item">Стерлитамак</li>
@@ -863,8 +894,12 @@
             </ul>
           </div>
         </div>
-        <div class="departure__block departure__block--tags">
-          <h3 class="departure__block-title">Причины обращения к наркологу</h3>
+        <div
+          class="departure__block departure__block--tags departure__block--accordion animation-item transform-item"
+        >
+          <button class="departure__block-title" type="button">
+            Причины обращения к наркологу
+          </button>
           <ul class="departure__tags">
             <li class="departure__tag">Запой</li>
             <li class="departure__tag">Похмелье</li>
@@ -881,13 +916,15 @@
 <section class="what section-offset">
   <div class="container what__container">
     <div class="what__header">
-      <h2 class="section-title what__title">Что врач берет с собой на выезд</h2>
+      <h2 class="section-title what__title animation-item text-animation">
+        Что врач берет с собой на выезд
+      </h2>
       <p class="what__descr">
         Чемоданчик психиатра содержит инструменты для неврологического и
         соматического скрининга.
       </p>
     </div>
-    <div class="what__inner">
+    <div class="what__inner animation-item transform-item">
       <article class="what__item">
         <picture class="what__item-picture">
           <source srcset="assets/img/what/1.webp" type="image/webp" />
@@ -994,9 +1031,9 @@
 
 <section class="installment section-offset">
   <div class="container installment__container">
-    <div class="installment__inner">
+    <div class="installment__inner animation-item transform-item">
       <div class="installment__content">
-        <h2 class="installment__title">
+        <h2 class="installment__title animation-item text-animation">
           Поможем прямо сейчас в любой ситуации!
         </h2>
         <p class="installment__descr">Рассрочка 0% на все медицинские услуги</p>
@@ -1037,17 +1074,23 @@
 </section>
 
 <section class="licences section-offset">
-  <div class="container licences__container swiper__container swiper__container">
+  <div class="container licences__container swiper__container">
     <div class="licences__head swiper__head">
       <div class="licences__head-info">
-        <h2 class="licences__title section-title">Лицензии и сертификаты</h2>
-        <p class="licences__number">Номер лицензии Л041-01170-02/00342140</p>
+        <h2
+          class="licences__title section-title swiper__title animation-item text-animation"
+        >
+          Лицензии и сертификаты
+        </h2>
+        <p class="licences__number swiper__subtitle">
+          Номер лицензии Л041-01170-02/00342140
+        </p>
       </div>
       <div class="licences__head-actions">
-        <a class="licences__all standart-btn primary-btn" href="#"
+        <a class="licences__all standart-btn primary-btn swiper__btn" href="#"
           >Все сертификаты</a
         >
-        <p class="licences__check">
+        <p class="licences__check swiper__btn">
           Проверить лицензию на сайте
           <a href="#" target="_blank" rel="noopener noreferrer"
             >РосЗдравНадзора</a
@@ -1061,7 +1104,7 @@
         <div class="swiper-wrapper licences__swiper-wrapper">
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/1.jpg"
             >
@@ -1077,7 +1120,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/2.jpg"
             >
@@ -1093,7 +1136,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/3.jpg"
             >
@@ -1109,7 +1152,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/1.jpg"
             >
@@ -1125,7 +1168,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/2.jpg"
             >
@@ -1141,7 +1184,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/3.jpg"
             >
@@ -1157,7 +1200,7 @@
           </div>
           <div class="swiper-slide licences__swiper-slide">
             <a
-              class="licences__item photo-zoom"
+              class="licences__item photo-zoom animation-item scale-item"
               data-fancybox="licences"
               href="assets/img/licences/1.jpg"
             >
@@ -1190,118 +1233,134 @@
   </div>
 </section>
 
-<section class="why section-offset">
-  <div class="container why__container">
-    <h2 class="why__title">Причины обратиться к нам</h2>
-    <div class="why__inner">
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/1.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Наши специалисты</h3>
-        <p class="why__card-descr">
-          У нас работает команда прекрасных врачей разных специальностей. Это
-          опытные наркологи, аддиктологи, психиатры, психологи, физиотерапевты,
-          психотерапевты, инструкторы и неврологи.
-        </p>
-      </article>
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/2.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Гарантии от срыва</h3>
-        <p class="why__card-descr">
-          Длительное поэтапное лечение с применением дополнительных методик
-          кодирования препаратами последнего поколения является лучшей гарантией
-          срыва. Мы предлагаем лечение в клинике, реабилитационный период и
-          полноценную социализацию всем зависимым.
-        </p>
-      </article>
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/3.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Поддержка вне центра</h3>
-        <p class="why__card-descr">
-          Родственники и сами пациенты всегда могут обратиться к нашим
-          специалистам за поддержкой и рекомендациями после пребывания в центре.
-          Мы всегда готовы помочь актуальными медицинскими советами и
-          предоставить другие клинические услуги.
-        </p>
-      </article>
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/4.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Индивидуальные программы</h3>
-        <p class="why__card-descr">
-          Для каждого пациента разрабатывается отдельная программа, которая
-          учитывает возраст, предпочтения, тип и стаж зависимости, состояние
-          здоровья, медицинский анамнез и другие характеристики.
-        </p>
-      </article>
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/5.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Широкий перечень услуг</h3>
-        <p class="why__card-descr">
-          Мы предлагаем амбулаторное и стационарное лечение в клинике,
-          реабилитационное проживание с прохождением психотерапии,
-          профориентации и ресоциализации. Также представлены услуги
-          кодирования, вызова нарколога на дом и терапии УБОД.
-        </p>
-      </article>
-      <article class="why__card">
-        <picture class="why__card-icon">
-          <img
-            class="why__card-img"
-            src="assets/img/why/6.svg"
-            loading="lazy"
-            alt=""
-          />
-        </picture>
-        <h3 class="why__card-title">Юридическое сопровождение</h3>
-        <p class="why__card-descr">
-          С каждым пациентом мы заключаем соглашение, все предоставленные услуги
-          заранее согласовываются и подтверждаются. Мы оформляем документы с
-          соблюдением всех законодательных стандартов и положений.
-        </p>
-      </article>
+<section class="why">
+  <div class="container why__container swiper__container">
+    <h2
+      class="why__title section-title swiper__title animation-item text-animation"
+    >
+      Причины обратиться к нам
+    </h2>
+    <div class="why__inner custom-wrapper__swiper">
+      <div class="swiper why__swiper">
+        <div class="swiper-wrapper why__swiper-wrapper">
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/1.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Наши специалисты</h3>
+            <p class="why__card-descr">
+              У нас работает команда прекрасных врачей разных специальностей.
+              Это опытные наркологи, аддиктологи, психиатры, психологи,
+              физиотерапевты, психотерапевты, инструкторы и неврологи.
+            </p>
+          </article>
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/2.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Гарантии от срыва</h3>
+            <p class="why__card-descr">
+              Длительное поэтапное лечение с применением дополнительных методик
+              кодирования препаратами последнего поколения является лучшей
+              гарантией срыва. Мы предлагаем лечение в клинике, реабилитационный
+              период и полноценную социализацию всем зависимым.
+            </p>
+          </article>
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/3.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Поддержка вне центра</h3>
+            <p class="why__card-descr">
+              Родственники и сами пациенты всегда могут обратиться к нашим
+              специалистам за поддержкой и рекомендациями после пребывания в
+              центре. Мы всегда готовы помочь актуальными медицинскими советами
+              и предоставить другие клинические услуги.
+            </p>
+          </article>
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/4.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Индивидуальные программы</h3>
+            <p class="why__card-descr">
+              Для каждого пациента разрабатывается отдельная программа, которая
+              учитывает возраст, предпочтения, тип и стаж зависимости, состояние
+              здоровья, медицинский анамнез и другие характеристики.
+            </p>
+          </article>
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/5.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Широкий перечень услуг</h3>
+            <p class="why__card-descr">
+              Мы предлагаем амбулаторное и стационарное лечение в клинике,
+              реабилитационное проживание с прохождением психотерапии,
+              профориентации и ресоциализации. Также представлены услуги
+              кодирования, вызова нарколога на дом и терапии УБОД.
+            </p>
+          </article>
+          <article class="swiper-slide why__card animation-item scale-item">
+            <picture class="why__card-icon">
+              <img
+                class="why__card-img"
+                src="assets/img/why/6.svg"
+                loading="lazy"
+                alt=""
+              />
+            </picture>
+            <h3 class="why__card-title">Юридическое сопровождение</h3>
+            <p class="why__card-descr">
+              С каждым пациентом мы заключаем соглашение, все предоставленные
+              услуги заранее согласовываются и подтверждаются. Мы оформляем
+              документы с соблюдением всех законодательных стандартов и
+              положений.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="why__controls">
+      <div class="swiper__pagination why__pagination"></div>
     </div>
   </div>
 </section>
 
-<section class="doctors section-offset">
+<section class="doctors section-offset bg-grey section-padding">
   <div class="container doctors__container swiper__container">
     <div class="doctors__head swiper__head">
-      <h2 class="doctors__title section-title">Наши специалисты</h2>
-      <a class="doctors__all standart-btn primary-btn" href="#"
+      <h2
+        class="doctors__title section-title swiper__title animation-item text-animation"
+      >
+        Наши специалисты
+      </h2>
+      <a class="doctors__all standart-btn primary-btn swiper__btn" href="#"
         >Все специалисты</a
       >
     </div>
@@ -1309,7 +1368,10 @@
     <div class="custom-wrapper__swiper doctors__inner">
       <div class="swiper doctors__swiper">
         <div class="swiper-wrapper doctors__swiper-wrapper">
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/1.webp" type="image/webp" />
@@ -1342,7 +1404,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/2.webp" type="image/webp" />
@@ -1375,7 +1440,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/3.webp" type="image/webp" />
@@ -1408,7 +1476,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/1.webp" type="image/webp" />
@@ -1441,7 +1512,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/2.webp" type="image/webp" />
@@ -1474,7 +1548,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide doctors__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide doctors__item change__item-title animation-item scale-item"
+          >
             <div class="doctors__item-photo">
               <picture class="doctors__item-picture">
                 <source srcset="assets/img/doctors/3.webp" type="image/webp" />
@@ -1527,9 +1604,13 @@
 
 <section class="gallery section-offset">
   <div class="container gallery__container swiper__container">
-    <div class="gallery__head swiper__head">
-      <h2 class="gallery__title section-title">Фотогалерея центра</h2>
-      <a class="gallery__all standart-btn primary-btn" href="#"
+    <div class="gallery__head swiper__head swiper__head">
+      <h2
+        class="gallery__title section-title swiper__title animation-item text-animation"
+      >
+        Фотогалерея центра
+      </h2>
+      <a class="gallery__all standart-btn primary-btn swiper__btn" href="#"
         >Все фотографии</a
       >
     </div>
@@ -1538,7 +1619,7 @@
       <div class="swiper gallery__swiper">
         <div class="swiper-wrapper gallery__swiper-wrapper">
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/1.jpg"
           >
@@ -1553,7 +1634,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/2.jpg"
           >
@@ -1568,7 +1649,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/3.jpg"
           >
@@ -1583,7 +1664,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/1.jpg"
           >
@@ -1598,7 +1679,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/2.jpg"
           >
@@ -1613,7 +1694,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/3.jpg"
           >
@@ -1628,7 +1709,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/1.jpg"
           >
@@ -1643,7 +1724,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/2.jpg"
           >
@@ -1658,7 +1739,7 @@
             </picture>
           </a>
           <a
-            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom"
+            class="swiper-slide__item gallery__item swiper-slide gallery__swiper-slide photo-zoom animation-item scale-item"
             data-fancybox
             href="assets/img/gallery/3.jpg"
           >
@@ -1693,7 +1774,7 @@
 
 <section class="text section-offset">
   <div class="container text__container">
-    <div class="text__content">
+    <div class="text__content animation-item transform-item">
       <h2>
         Услуги наркологической клиники и еще какой-то длинный заголовок для
         показа отступов между строчками
@@ -1728,7 +1809,7 @@
         терапии наркомании.
       </p>
     </div>
-    <div class="text__content">
+    <div class="text__content animation-item transform-item">
       <h2>Условия лечения в нашей клинике</h2>
       <p>
         Высокая эффективность лечения достигается с помощью компетентности
@@ -1781,7 +1862,9 @@
 
 <section class="faq section-offset">
   <div class="container faq__container hide-items">
-    <h2 class="section-title faq__title">Часто задаваемые вопросы</h2>
+    <h2 class="section-title faq__title animation-item text-animation">
+      Часто задаваемые вопросы
+    </h2>
 
     <div class="hide-item faq__hide-item">
       <button class="hide-item__title faq__hide-item__title" type="button">
@@ -2136,7 +2219,7 @@
 <section class="conditions section-offset">
   <div class="container conditions__container swiper__container">
     <div class="conditions__inner">
-      <div class="conditions__slider">
+      <div class="conditions__slider animation-item transform-item">
         <div class="conditions__swiper-wrap custom-wrapper__swiper">
           <div class="swiper conditions__swiper">
             <div class="swiper-wrapper conditions__swiper-wrapper">
@@ -2264,9 +2347,13 @@
           <div class="swiper__pagination conditions__pagination"></div>
         </div>
       </div>
-      <div class="conditions__content">
-        <h2 class="conditions__title">Условия проживания в клинике</h2>
-        <ul class="conditions__list">
+      <div class="conditions__content animation-item transform-item">
+        <h2
+          class="conditions__title swiper__title animation-item text-animation"
+        >
+          Условия проживания в клинике
+        </h2>
+        <ul class="conditions__list swiper__padding">
           <li class="conditions__list-item">
             <p class="conditions__item-name">Надзор</p>
             <p class="conditions__item-descr">
@@ -2314,14 +2401,22 @@
 <section class="reviews bg-grey section-padding">
   <div class="container reviews__container swiper__container">
     <div class="reviews__head swiper__head">
-      <h2 class="reviews__title section-title">Отзывы пациентов</h2>
-      <a class="reviews__all standart-btn primary-btn" href="#">Все отзывы</a>
+      <h2
+        class="reviews__title section-title swiper__title animation-item text-animation"
+      >
+        Отзывы пациентов
+      </h2>
+      <a class="reviews__all standart-btn primary-btn swiper__btn" href="#"
+        >Все отзывы</a
+      >
     </div>
 
     <div class="custom-wrapper__swiper reviews__inner">
       <div class="swiper reviews__swiper">
         <div class="swiper-wrapper reviews__swiper-wrapper">
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 4 из 5">
                 <img
@@ -2379,7 +2474,9 @@
             <time class="reviews__date" datetime="2026-05-25">2026-05-25</time>
           </div>
 
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 4 из 5">
                 <img
@@ -2439,7 +2536,9 @@
             <time class="reviews__date" datetime="2026-05-25">2026-05-25</time>
           </div>
 
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 4 из 5">
                 <img
@@ -2497,7 +2596,9 @@
             <time class="reviews__date" datetime="2026-05-25">2026-05-25</time>
           </div>
 
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 5 из 5">
                 <img
@@ -2554,7 +2655,9 @@
             <time class="reviews__date" datetime="2026-05-20">2026-05-20</time>
           </div>
 
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 4 из 5">
                 <img
@@ -2611,7 +2714,9 @@
             <time class="reviews__date" datetime="2026-05-18">2026-05-18</time>
           </div>
 
-          <div class="swiper-slide reviews__item change__item-title">
+          <div
+            class="swiper-slide reviews__item change__item-title animation-item scale-item"
+          >
             <div class="reviews__card-top">
               <div class="reviews__raiting" aria-label="Оценка 5 из 5">
                 <img
@@ -2688,9 +2793,11 @@
 
 <section class="rating bg-grey section-padding">
   <div class="container rating__container">
-    <h2 class="section-title rating__title">Независимые рейтинги</h2>
+    <h2 class="section-title rating__title animation-item text-animation">
+      Независимые рейтинги
+    </h2>
     <div class="rating__inner">
-      <article class="rating__card">
+      <article class="rating__card animation-item scale-item">
         <picture class="rating__logo">
           <img
             class="rating__logo-img rating__logo-img_yandex"
@@ -2709,7 +2816,7 @@
           <span class="rating__value">4.8 из 5.0</span>
         </div>
       </article>
-      <article class="rating__card">
+      <article class="rating__card animation-item scale-item">
         <picture class="rating__logo">
           <img
             class="rating__logo-img rating__logo-img_google"
@@ -2728,7 +2835,7 @@
           <span class="rating__value">4.8 из 5.0</span>
         </div>
       </article>
-      <article class="rating__card">
+      <article class="rating__card animation-item scale-item">
         <picture class="rating__logo">
           <img
             class="rating__logo-img rating__logo-img_zoon"
@@ -2747,7 +2854,7 @@
           <span class="rating__value">4.8 из 5.0</span>
         </div>
       </article>
-      <article class="rating__card">
+      <article class="rating__card animation-item scale-item">
         <picture class="rating__logo">
           <img
             class="rating__logo-img rating__logo-img_2gis"
@@ -2772,7 +2879,7 @@
 
 <section class="text bg-grey">
   <div class="container text__container">
-    <div class="text__content">
+    <div class="text__content animation-item transform-item">
       <h2>Этапность работы с пациентами</h2>
       <p>
         Частный наркологический центр предоставляет следующие услуги,
@@ -2886,14 +2993,18 @@
 
 <section class="stock section-offset">
   <div class="container stock__container swiper__container">
-    <h2 class="stock__title section-title swiper__title">Наши акции</h2>
+    <h2
+      class="stock__title section-title swiper__title animation-item text-animation"
+    >
+      Акции наркологической клиники
+    </h2>
 
     <div class="custom-wrapper__swiper stock__inner">
       <div class="swiper stock__swiper">
         <div class="swiper-wrapper stock__swiper-wrapper">
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -2919,7 +3030,7 @@
 
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -2943,7 +3054,7 @@
 
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -2971,7 +3082,7 @@
 
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -2997,7 +3108,7 @@
 
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -3021,7 +3132,7 @@
 
           <a
             href="#"
-            class="swiper-slide stock__item change-item popup-btn change-item__btn"
+            class="swiper-slide stock__item change-item popup-btn change-item__btn animation-item scale-item"
             data-path="popup-change"
           >
             <picture class="stock__item-picture">
@@ -3067,12 +3178,19 @@
 
 <section class="articles section-offset">
   <div class="container articles__container swiper__container">
-    <h2 class="articles__title section-title swiper__title">Наши статьи</h2>
+    <h2
+      class="articles__title section-title swiper__title animation-item text-animation"
+    >
+      Наши статьи
+    </h2>
 
     <div class="custom-wrapper__swiper articles__inner">
       <div class="swiper articles__swiper">
         <div class="swiper-wrapper articles__swiper-wrapper">
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/1.webp" type="image/webp" />
               <img
@@ -3092,7 +3210,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/2.webp" type="image/webp" />
               <img
@@ -3112,7 +3233,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/3.webp" type="image/webp" />
               <img
@@ -3132,7 +3256,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/1.webp" type="image/webp" />
               <img
@@ -3152,7 +3279,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/2.webp" type="image/webp" />
               <img
@@ -3172,7 +3302,10 @@
             </div>
           </a>
 
-          <a href="#" class="swiper-slide articles__item change__item-title">
+          <a
+            href="#"
+            class="swiper-slide articles__item change__item-title animation-item scale-item"
+          >
             <picture class="articles__item-picture">
               <source srcset="assets/img/stock/3.webp" type="image/webp" />
               <img
